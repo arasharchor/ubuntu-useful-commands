@@ -1,0 +1,1 @@
+rename  's/__/_/' *  replace __ with _
