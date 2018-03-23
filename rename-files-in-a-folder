@@ -1,0 +1,1 @@
+rename 's/out/:/g' *.png -vn    replace out with :   % try without -vn
