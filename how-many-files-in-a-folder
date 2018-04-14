@@ -1,3 +1,7 @@
 
 # to show how many files are contained in a folder
 du -a | cut -d/ -f2 | sort | uniq -c | sort -nr  
+
+
+# to show how many file inside a folder when you are in it. It is different with the one above
+ls -l . | egrep -c '^-'
