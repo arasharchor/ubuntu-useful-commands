@@ -1,0 +1,1 @@
+ find ./NADI-Face/ -type f -size +5M -exec ls -lh {} \;
