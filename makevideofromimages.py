@@ -15,3 +15,7 @@ for image in images:
 
 cv2.destroyAllWindows()
 video.release()
+
+
+ffmpeg -framerate 15 -i %d.jpg -c:v libx264 -pr
+ofile:v high -crf 20 -pix_fmt yuv420p output.mp4
