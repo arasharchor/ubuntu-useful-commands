@@ -1,1 +1,2 @@
 rename 's/out/:/g' *.png -vn    replace out with :   % try without -vn
+ls | cat -n | while read n f; do mv "$f" "file-$n.jpg"; done
