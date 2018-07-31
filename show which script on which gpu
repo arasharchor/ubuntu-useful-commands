@@ -1,0 +1,2 @@
+gpustat -p
+ps aux | grep <FOUND PID>
