@@ -1,0 +1,360 @@
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
+azim_se@bolia:~/DATASETS/Worldview4/test$ ls
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images
+WV-4.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ ipython
+Python 2.7.12 (default, Nov 20 2017, 18:23:56) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.4.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: import gdal
+
+In [2]: ds=gdal.Open("17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF", 
+   ...: gdal.GA_ReadOnly)
+
+In [3]: r=ds.GetRasterBand(1)
+
+In [4]: g=ds.GetRasterBand(2)
+
+In [5]: b=ds.GetRasterBand(3)
+
+In [6]: ds.ReadAsArray?
+Signature: ds.ReadAsArray(xoff=0, yoff=0, xsize=None, ysize=None, buf_obj=None)
+Docstring: <no docstring>
+File:      /usr/lib/python2.7/dist-packages/osgeo/gdal.py
+Type:      instancemethod
+
+In [7]: d=ds.ReadAsArray(10000,10000,1000,1000)
+
+In [8]: d
+Out[8]: 
+array([[[213, 264, 312, ..., 151, 157, 168],
+        [213, 245, 291, ..., 153, 162, 155],
+        [224, 257, 295, ..., 165, 173, 161],
+        ..., 
+        [240, 239, 225, ..., 177, 168, 167],
+        [244, 241, 230, ..., 160, 163, 173],
+        [251, 245, 230, ..., 161, 163, 164]],
+
+       [[360, 406, 448, ..., 275, 280, 288],
+        [361, 388, 428, ..., 276, 284, 277],
+        [369, 398, 432, ..., 288, 295, 283],
+        ..., 
+        [377, 375, 359, ..., 288, 282, 283],
+        [384, 378, 365, ..., 272, 276, 289],
+        [398, 390, 370, ..., 272, 275, 280]],
+
+       [[353, 390, 426, ..., 320, 325, 331],
+        [353, 376, 411, ..., 321, 328, 322],
+        [362, 385, 414, ..., 332, 337, 328],
+        ..., 
+        [400, 399, 387, ..., 335, 329, 329],
+        [408, 405, 394, ..., 320, 323, 332],
+        [417, 410, 396, ..., 319, 321, 324]]], dtype=uint16)
+
+In [9]: d.shape
+Out[9]: (3, 1000, 1000)
+
+In [10]: dsorig=gdal.Open("17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF", gdal.
+    ...: GA_ReadOnly)
+
+In [11]: dsorig.ReadAsArray?
+Signature: dsorig.ReadAsArray(xoff=0, yoff=0, xsize=None, ysize=None, buf_obj=None)
+Docstring: <no docstring>
+File:      /usr/lib/python2.7/dist-packages/osgeo/gdal.py
+Type:      instancemethod
+
+In [12]: 
+
+In [12]: d=dsorig.ReadAsArray(10000,10000,1000,1000)
+
+In [13]: d.shape
+Out[13]: (4, 1000, 1000)
+
+In [14]: dsorig.RasterXSize()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-14-15a32c9dff67> in <module>()
+----> 1 dsorig.RasterXSize()
+
+TypeError: 'int' object is not callable
+
+In [15]: dsorig.RasterXSize
+Out[15]: 45386
+
+In [16]: dsorig.RasterYSize
+Out[16]: 33753
+
+
+
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
+azim_se@bolia:~$ cd '/home/azim_se/DATASETS/Worldview4/test'
+azim_se@bolia:~/DATASETS/Worldview4/test$ ls
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF          images
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml  WV-4.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdaladdo -r average 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF 2 4 8 16 32 64 128 256 512
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+openev: command not found
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/ openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+Display all 134 possibilities? (y or n)
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+ERROR 1: 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF is neither a file or directory, Geoconcept access failed.
+
+azim_se@bolia:~/DATASETS/Worldview4/test$ ls -lr
+total 15990780
+-rw-r--r-- 1 azim_se dlr_azim_se_p      437547 Aug 21 19:41 WV-4.jpg
+drwxr-xr-x 2 azim_se dlr_azim_se_p        4096 Aug 23 17:42 images
+-rw-r--r-- 1 azim_se dlr_azim_se_p  4116405002 Aug 24 15:52 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+-rw-r--r-- 1 azim_se dlr_azim_se_p       14462 Aug 23 17:36 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+-r--r--r-- 1 azim_se dlr_azim_se_p 12257685312 Aug 10 15:42 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+Warning: loading of qgis translation failed [/usr/share/qgis/i18n//qgis_en_US]
+Warning: loading of qt translation failed [/usr/share/qt4/translations/qt_en_US]
+Warning: QGraphicsScene::addItem: item has already been added to this scene
+Warning: void DBusMenuExporterPrivate::addAction(QAction*, int): Already tracking action "&Toolbox" under id 287 
+^Z
+[1]+  Stopped                 qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ bg
+[1]+ qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF &
+azim_se@bolia:~/DATASETS/Worldview4/test$ ls
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF          images
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml  WV-4.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate --help
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 3 -b 2 -b 1 
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images/
+WV-4.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 3 -b 2 -b 1 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate --formats
+Supported Formats:
+  VRT (rw+v): Virtual Raster
+  GTiff (rw+vs): GeoTIFF
+  NITF (rw+vs): National Imagery Transmission Format
+  RPFTOC (rovs): Raster Product Format TOC format
+  ECRGTOC (rovs): ECRG TOC format
+  HFA (rw+v): Erdas Imagine Images (.img)
+  SAR_CEOS (rov): CEOS SAR Image
+  CEOS (rov): CEOS Image
+  JAXAPALSAR (rov): JAXA PALSAR Product Reader (Level 1.1/1.5)
+  GFF (rov): Ground-based SAR Applications Testbed File Format (.gff)
+  ELAS (rw+v): ELAS
+  AIG (rov): Arc/Info Binary Grid
+  AAIGrid (rwv): Arc/Info ASCII Grid
+  GRASSASCIIGrid (rov): GRASS ASCII Grid
+  SDTS (rov): SDTS Raster
+  OGDI (ros): OGDI Bridge
+  DTED (rwv): DTED Elevation Raster
+  PNG (rwv): Portable Network Graphics
+  JPEG (rwv): JPEG JFIF
+  MEM (rw+): In Memory Raster
+  JDEM (rov): Japanese DEM (.mem)
+  GIF (rwv): Graphics Interchange Format (.gif)
+  BIGGIF (rov): Graphics Interchange Format (.gif)
+  ESAT (rov): Envisat Image Format
+  BSB (rov): Maptech BSB Nautical Charts
+  XPM (rwv): X11 PixMap Format
+  BMP (rw+v): MS Windows Device Independent Bitmap
+  DIMAP (rov): SPOT DIMAP
+  AirSAR (ro): AirSAR Polarimetric Image
+  RS2 (ros): RadarSat 2 XML Product
+  PCIDSK (rw+v): PCIDSK Database File
+  PCRaster (rw): PCRaster Raster File
+  ILWIS (rw+v): ILWIS Raster Map
+  SGI (rw+): SGI Image File Format 1.0
+  SRTMHGT (rwv): SRTMHGT File Format
+  Leveller (rw+): Leveller heightfield
+  Terragen (rw+): Terragen heightfield
+  GMT (rw): GMT NetCDF Grid Format
+  netCDF (rw+s): Network Common Data Format
+  HDF4 (ros): Hierarchical Data Format Release 4
+  HDF4Image (rw+): HDF4 Dataset
+  ISIS3 (rov): USGS Astrogeology ISIS cube (Version 3)
+  ISIS2 (rw+v): USGS Astrogeology ISIS cube (Version 2)
+  PDS (rov): NASA Planetary Data System
+  TIL (rov): EarthWatch .TIL
+  ERS (rw+v): ERMapper .ers Labelled
+  JP2OpenJPEG (rwv): JPEG-2000 driver based on OpenJPEG library
+  L1B (rovs): NOAA Polar Orbiter Level 1b Data Set
+  FIT (rwv): FIT Image
+  GRIB (rov): GRIdded Binary (.grb)
+  JPEG2000 (rwv): JPEG-2000 part 1 (ISO/IEC 15444-1)
+  RMF (rw+v): Raster Matrix Format
+  WCS (rovs): OGC Web Coverage Service
+  WMS (rwvs): OGC Web Map Service
+  MSGN (ro): EUMETSAT Archive native (.nat)
+  RST (rw+v): Idrisi Raster A.1
+  INGR (rw+v): Intergraph Raster
+  GSAG (rwv): Golden Software ASCII Grid (.grd)
+  GSBG (rw+v): Golden Software Binary Grid (.grd)
+  GS7BG (rw+v): Golden Software 7 Binary Grid (.grd)
+  COSAR (ro): COSAR Annotated Binary Matrix (TerraSAR-X)
+  TSX (rov): TerraSAR-X Product
+  COASP (ro): DRDC COASP SAR Processor Raster
+  R (rwv): R Object Data Store
+  MAP (rov): OziExplorer .MAP
+  PNM (rw+v): Portable Pixmap Format (netpbm)
+  DOQ1 (rov): USGS DOQ (Old Style)
+  DOQ2 (rov): USGS DOQ (New Style)
+  ENVI (rw+v): ENVI .hdr Labelled
+  EHdr (rw+v): ESRI .hdr Labelled
+  GenBin (rov): Generic Binary (.hdr Labelled)
+  PAux (rw+): PCI .aux Labelled
+  MFF (rw+): Vexcel MFF Raster
+  MFF2 (rw+): Vexcel MFF2 (HKV) Raster
+  FujiBAS (ro): Fuji BAS Scanner Image
+  GSC (rov): GSC Geogrid
+  FAST (rov): EOSAT FAST Format
+  BT (rw+v): VTP .bt (Binary Terrain) 1.3 Format
+  LAN (rw+v): Erdas .LAN/.GIS
+  CPG (ro): Convair PolGASP
+  IDA (rw+): Image Data and Analysis
+  NDF (rov): NLAPS Data Format
+  EIR (rov): Erdas Imagine Raw
+  DIPEx (rov): DIPEx
+  LCP (rwv): FARSITE v.4 Landscape File (.lcp)
+  GTX (rw+v): NOAA Vertical Datum .GTX
+  LOSLAS (rov): NADCON .los/.las Datum Grid Shift
+  NTv2 (rw+vs): NTv2 Datum Grid Shift
+  CTable2 (rw+v): CTable2 Datum Grid Shift
+  ACE2 (rov): ACE2
+  SNODAS (rov): Snow Data Assimilation System
+  KRO (rw+v): KOLOR Raw
+  ARG (rwv): Azavea Raster Grid format
+  RIK (ro): Swedish Grid RIK (.rik)
+  USGSDEM (rwv): USGS Optional ASCII DEM (and CDED)
+  GXF (ro): GeoSoft Grid Exchange Format
+  DODS (ro): DAP 3.x servers
+  HTTP (ro): HTTP Fetching Wrapper
+  BAG (ro): Bathymetry Attributed Grid
+  HDF5 (ros): Hierarchical Data Format Release 5
+  HDF5Image (ro): HDF5 Dataset
+  NWT_GRD (rov): Northwood Numeric Grid Format .grd/.tab
+  NWT_GRC (rov): Northwood Classified Grid Format .grc/.tab
+  ADRG (rw+vs): ARC Digitized Raster Graphics
+  SRP (rovs): Standard Raster Product (ASRP/USRP)
+  BLX (rw): Magellan topo (.blx)
+  Rasterlite (rws): Rasterlite
+  EPSILON (rwv): Epsilon wavelets
+  PostGISRaster (rws): PostGIS Raster driver
+  SAGA (rw+v): SAGA GIS Binary Grid (.sdat)
+  KMLSUPEROVERLAY (rwv): Kml Super Overlay
+  XYZ (rwv): ASCII Gridded XYZ
+  HF2 (rwv): HF2/HFZ heightfield raster
+  PDF (rwvs): Geospatial PDF
+  OZI (rov): OziExplorer Image File
+  CTG (rov): USGS LULC Composite Theme Grid
+  E00GRID (rov): Arc/Info Export E00 GRID
+  WEBP (rwv): WEBP
+  ZMap (rwv): ZMap Plus Grid
+  NGSGEOID (rov): NOAA NGS Geoid Height Grids
+  MBTiles (rov): MBTiles
+  IRIS (rov): IRIS data (.PPI, .CAPPi etc)
+azim_se@bolia:~/DATASETS/Worldview4/test$ list
+listbib       listgeo       listings-ext  listres       
+azim_se@bolia:~/DATASETS/Worldview4/test$ listgeo 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+Geotiff_Information:
+   Version: 1
+   Key_Revision: 1.0
+   Tagged_Information:
+      ModelTiepointTag (2,3):
+         0.5               0.5               0                
+         684425.55         5339293.35        0                
+      ModelPixelScaleTag (1,3):
+         0.3               0.3               0                
+      End_Of_Tags.
+   Keyed_Information:
+      GTModelTypeGeoKey (Short,1): ModelTypeProjected
+      GTRasterTypeGeoKey (Short,1): RasterPixelIsArea
+      GTCitationGeoKey (Ascii,24): "Projected Coordinates |"
+      GeographicTypeGeoKey (Short,1): GCS_WGS_84
+      GeogCitationGeoKey (Ascii,6): "WGS84"
+      GeogGeodeticDatumGeoKey (Short,1): Datum_WGS84
+      GeogPrimeMeridianGeoKey (Short,1): PM_Greenwich
+      GeogLinearUnitsGeoKey (Short,1): Linear_Meter
+      GeogAngularUnitsGeoKey (Short,1): Angular_Degree
+      GeogEllipsoidGeoKey (Short,1): Ellipse_WGS_84
+      GeogSemiMajorAxisGeoKey (Double,1): 6378137          
+      GeogSemiMinorAxisGeoKey (Double,1): 6356752.31424518 
+      ProjectedCSTypeGeoKey (Short,1): PCS_WGS84_UTM_zone_32N
+      PCSCitationGeoKey (Ascii,12): "UTM / WGS84"
+      ProjectionGeoKey (Short,1): Proj_UTM_zone_32N
+      ProjLinearUnitsGeoKey (Short,1): Linear_Meter
+      End_Of_Keys.
+   End_Of_Geotiff.
+
+PCS = 32632 (WGS 84 / UTM zone 32N)
+Projection = 16032 (UTM zone 32N)
+Projection Method: CT_TransverseMercator
+   ProjNatOriginLatGeoKey: 0.000000 (  0d 0' 0.00"N)
+   ProjNatOriginLongGeoKey: 9.000000 (  9d 0' 0.00"E)
+   ProjScaleAtNatOriginGeoKey: 0.999600
+   ProjFalseEastingGeoKey: 500000.000000 m
+   ProjFalseNorthingGeoKey: 0.000000 m
+GCS: 4326/WGS 84
+Datum: 6326/World Geodetic System 1984
+Ellipsoid: 7030/WGS 84 (6378137.00,6356752.31)
+Prime Meridian: 8901/Greenwich (0.000000/  0d 0' 0.00"E)
+Projection Linear Units: 9001/metre (1.000000m)
+
+Corner Coordinates:
+Upper Left    (  684425.400, 5339293.500)  ( 11d28'51.86"E, 48d10'48.32"N)
+Lower Left    (  684425.400, 5329167.600)  ( 11d28'36.08"E, 48d 5'20.66"N)
+Upper Right   (  698041.200, 5339293.500)  ( 11d39'50.57"E, 48d10'33.57"N)
+Lower Right   (  698041.200, 5329167.600)  ( 11d39'33.62"E, 48d 5' 5.96"N)
+Center        (  691233.300, 5334230.550)  ( 11d34'13.04"E, 48d 7'57.26"N)
