@@ -1,2 +1,2 @@
 #This will convert all the .jpg files into .png files and saves the converted files in the same directory.
-mogrify -format png /path/*.jpg    
+mogrify -format jpg *.png   
