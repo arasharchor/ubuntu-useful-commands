@@ -2,6 +2,653 @@
 #################TENSORFLOW#####################
 ###########################################################
 bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
+azim_se@bolia:~$ cd '/home/azim_se/DATASETS/Worldview4/test' azim_se@bolia:~/DATASETS/Worldview4/test$ openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+openev: command not found
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+ERROR 1: 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF is neither a file or directory, Geoconcept access failed.
+
+
+
+^C
+
+^Z
+[1]+  Stopped                 ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ kill %1
+azim_se@bolia:~/DATASETS/Worldview4/test$ 
+[1]+  Terminated              ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ 
+azim_se@bolia:~/DATASETS/Worldview4/test$ qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+Warning: loading of qgis translation failed [/usr/share/qgis/i18n//qgis_en_US]
+Warning: loading of qt translation failed [/usr/share/qt4/translations/qt_en_US]
+Warning: QGraphicsScene::addItem: item has already been added to this scene
+Warning: void DBusMenuExporterPrivate::addAction(QAction*, int): Already tracking action "Terms of Service / About" under id 212 
+Warning: void DBusMenuExporterPrivate::addAction(QAction*, int): Already tracking action "&Toolbox" under id 326 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+^Z
+[1]+  Stopped                 qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ bg
+[1]+ qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF &
+azim_se@bolia:~/DATASETS/Worldview4/test$ ls
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 18500 12311 10000 10000 
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images/
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 18500 12311 10000 10000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ display 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+display: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie 
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images/
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+Address already in use: /home/azim_se/.config/geeqie/.command
+
+
+^Z
+[2]+  Stopped                 geeqie 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ bg
+[2]+ geeqie 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF &
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 18500 12311 10000 10000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 18500 12311 10000 10000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images/
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+[2]+  Done                    geeqie 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 18500 12311 10000 5000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ #gdal_translate -srcwin 18500 12311 10000 5000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ ipython
+Python 2.7.12 (default, Nov 20 2017, 18:23:56) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.4.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]:                                                                         
+Do you really want to exit ([y]/n)? y
+azim_se@bolia:~/DATASETS/Worldview4/test$ ipython
+Python 2.7.12 (default, Nov 20 2017, 18:23:56) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.4.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: (684668-684425)/0.3
+Out[1]: 810.0
+
+In [2]: (5339293-5333615)/0.3
+Out[2]: 18926.666666666668
+
+In [3]:                                                                         
+Do you really want to exit ([y]/n)? y
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 3000 10000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 10000 3000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIFSetup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 11000 3000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIFSetup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 11000 3000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+ERROR 4: `17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_16bit.TIF' does not exist in the file system,
+and is not recognised as a supported dataset name.
+
+GDALOpen failed - 4
+`17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_16bit.TIF' does not exist in the file system,
+and is not recognised as a supported dataset name.
+
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 11000 3000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 11000 3000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_.TIF17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+azim_se@bolia:~/DATASETS/Worldview4/test$ cd
+azim_se@bolia:~$ cd /sstore
+ls
+azim_se@bolia:/sstore$ ls
+archive  argos  backup  catena  data  projects  referenzen  tmp
+azim_se@bolia:/sstore$ cd archive
+azim_se@bolia:/sstore/archive$ cd angelo/
+azim_se@bolia:/sstore/archive/angelo$ ls
+Aerial      Earth-I          Nepal_WV_GeoEye  PRISM   test         Worldview-2
+Cartosat-1  GeoEye           P5               Skybox  TH-01        Worldview-3
+CORONA      IKONOS           PlanetLabs       SPOT5   Urthecast    Worldview-4
+Deimos-2    Juelich_Listner  Pleiades         SPOT-6  Worldview-1  ZY3
+azim_se@bolia:/sstore/archive/angelo$ cd S
+Skybox/ SPOT5/  SPOT-6/ 
+azim_se@bolia:/sstore/archive/angelo$ cd Skybox/
+azim_se@bolia:/sstore/archive/angelo/Skybox$ ls
+Chicago_Still  LasVegas  media                   Russland-Mirny-Mine
+Fos-Sur-Mer    Lima      München-Theresienwiese
+azim_se@bolia:/sstore/archive/angelo/Skybox$ cd München-Theresienwiese/
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese$ ls
+s01_20140407T101256Z
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese$ cd s01_20140407T101256Z/
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ ls
+5_video_frames  s01_20140407T101256Z_metadata.txt  video_frames
+EULA.pdf        video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ cd video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video$ ls
+s01_20140407T101256Z.mp4            s01_20140407T101256Z_thumbnail.png
+s01_20140407T101256Z_thumbnail.mp4
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video$ mplayer s01_20140407T101256Z.mp4 
+Creating config file: /home/azim_se/.mplayer/config
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+mplayer: could not connect to socket
+mplayer: No such file or directory
+Failed to open LIRC support. You will not be able to use your remote control.
+
+Playing s01_20140407T101256Z.mp4.
+libavformat version 56.40.101 (external)
+libavformat file format detected.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7fa8c9e23d80]Protocol name not provided, cannot determine if input is local or a network protocol, buffers and access patterns cannot be configured optimally without knowing the protocol
+[lavf] stream 0: video (h264), -vid 0
+VIDEO:  [H264]  1920x1080  24bpp  29.996 fps  13784.7 kbps (1682.7 kbyte/s)
+Clip info:
+ major_brand: isom
+ minor_version: 512
+ compatible_brands: isomiso2avc1mp41
+ encoder: Lavf54.6.100
+Load subtitles in ./
+==========================================================================
+Opening video decoder: [ffmpeg] FFmpeg's libavcodec codec family
+libavcodec version 56.60.100 (external)
+Selected video codec: [ffh264] vfm: ffmpeg (FFmpeg H.264)
+==========================================================================
+Audio: no sound
+Starting playback...
+Movie-Aspect is 1.78:1 - prescaling to correct movie aspect.
+VO: [vdpau] 1920x1080 => 1920x1080 Planar YV12 
+[ASPECT] Warning: No suitable new res found!
+[ASPECT] Warning: No suitable new res found!
+V:  30.0   0/  0 52%  3%  0.0% 0 0 
+
+
+Exiting... (End of file)
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video$ ls
+s01_20140407T101256Z.mp4            s01_20140407T101256Z_thumbnail.png
+s01_20140407T101256Z_thumbnail.mp4
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ ls
+5_video_frames  s01_20140407T101256Z_metadata.txt  video_frames
+EULA.pdf        video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ cd video_frames/
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video_frames$ ls
+^C^C
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video_frames$ ls
+^C^C^C^C^C
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video_frames$ ^C
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video_frames$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ ls
+5_video_frames  s01_20140407T101256Z_metadata.txt  video_frames
+EULA.pdf        video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ cd 5_video_frames/
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/5_video_frames$ ls
+s01_20140407T10125621Z_rpc.txt         s01_20140407T10130935Z_rpc.txt.AFFTRS
+s01_20140407T10125621Z_rpc.txt.AFFTRS  s01_20140407T10130935Z.tif
+s01_20140407T10125621Z.tif             s01_20140407T10131618Z_rpc.txt
+s01_20140407T101256Z_metadata.txt      s01_20140407T10131618Z_rpc.txt.AFFTRS
+s01_20140407T10130158Z_rpc.txt         s01_20140407T10131618Z.tif
+s01_20140407T10130158Z_rpc.txt.AFFTRS  s01_20140407T10132619Z_rpc.txt
+s01_20140407T10130158Z.tif             s01_20140407T10132619Z_rpc.txt.AFFTRS
+s01_20140407T10130935Z_rpc.txt         s01_20140407T10132619Z.tif
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/5_video_frames$ ^C
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/5_video_frames$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ ls
+5_video_frames  s01_20140407T101256Z_metadata.txt  video_frames
+EULA.pdf        video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ ls
+5_video_frames  s01_20140407T101256Z_metadata.txt  video_frames
+EULA.pdf        video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese$ ls
+s01_20140407T101256Z
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox$ ls
+Chicago_Still  LasVegas  media                   Russland-Mirny-Mine
+Fos-Sur-Mer    Lima      München-Theresienwiese
+azim_se@bolia:/sstore/archive/angelo/Skybox$ cd Lima/
+azim_se@bolia:/sstore/archive/angelo/Skybox/Lima$ ls
+s01_20140324T154105Z_metadata.txt   s01_20140324T154105Z_thumbnail.png
+s01_20140324T154105Z_thumbnail.kml  s01_20140324T154105Z.zip
+azim_se@bolia:/sstore/archive/angelo/Skybox/Lima$ mc
+
+azim_se@bolia:/tmp$ mplayer s01_20140610T041419Z.mp4
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+mplayer: could not connect to socket
+mplayer: No such file or directory
+Failed to open LIRC support. You will not be able to use your remote control.
+
+Playing s01_20140610T041419Z.mp4.
+libavformat version 56.40.101 (external)
+libavformat file format detected.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0591c22d80]Protocol name not provided, cannot determine if input is local or a network protocol, buffers and access patterns cannot be configured optimally without knowing the protocol
+[lavf] stream 0: video (h264), -vid 0
+VIDEO:  [H264]  1920x1080  24bpp  29.996 fps  4059.1 kbps (495.5 kbyte/s)
+Clip info:
+ major_brand: isom
+ minor_version: 512
+ compatible_brands: isomiso2avc1mp41
+ encoder: Lavf54.6.100
+Load subtitles in ./
+==========================================================================
+Opening video decoder: [ffmpeg] FFmpeg's libavcodec codec family
+libavcodec version 56.60.100 (external)
+Selected video codec: [ffh264] vfm: ffmpeg (FFmpeg H.264)
+==========================================================================
+Audio: no sound
+Starting playback...
+Movie-Aspect is 1.78:1 - prescaling to correct movie aspect.
+VO: [vdpau] 1920x1080 => 1920x1080 Planar YV12 
+[ASPECT] Warning: No suitable new res found!
+[ASPECT] Warning: No suitable new res found!
+V:  60.0   0/  0 37%  4%  0.0% 0 0 
+
+
+Exiting... (End of file)
+
+azim_se@bolia:/sstore/archive/angelo/Skybox/Lima$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox$ ls
+Chicago_Still  LasVegas  media                   Russland-Mirny-Mine
+Fos-Sur-Mer    Lima      München-Theresienwiese
+azim_se@bolia:/sstore/archive/angelo/Skybox$ cd LasVegas
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas$ ls
+Original
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas$ cd Original/
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas/Original$ ls
+LasVegas.zip
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas/Original$ 
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas/Original$ mc
+
+azim_se@bolia:/tmp$ mplayer s01_20140325T184627Z.mp4 
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+mplayer: could not connect to socket
+mplayer: No such file or directory
+Failed to open LIRC support. You will not be able to use your remote control.
+
+Playing s01_20140325T184627Z.mp4.
+libavformat version 56.40.101 (external)
+libavformat file format detected.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7ff4257ded80]Protocol name not provided, cannot determine if input is local or a network protocol, buffers and access patterns cannot be configured optimally without knowing the protocol
+[lavf] stream 0: video (h264), -vid 0
+VIDEO:  [H264]  1920x1080  24bpp  29.996 fps  4055.2 kbps (495.0 kbyte/s)
+Clip info:
+ major_brand: isom
+ minor_version: 512
+ compatible_brands: isomiso2avc1mp41
+ encoder: Lavf54.6.100
+Load subtitles in ./
+==========================================================================
+Opening video decoder: [ffmpeg] FFmpeg's libavcodec codec family
+libavcodec version 56.60.100 (external)
+Selected video codec: [ffh264] vfm: ffmpeg (FFmpeg H.264)
+==========================================================================
+Audio: no sound
+Starting playback...
+Movie-Aspect is 1.78:1 - prescaling to correct movie aspect.
+VO: [vdpau] 1920x1080 => 1920x1080 Planar YV12 
+[ASPECT] Warning: No suitable new res found!
+[ASPECT] Warning: No suitable new res found!
+V:  60.0   0/  0 33%  4%  0.0% 0 0 
+
+
+Exiting... (End of file)
+
+azim_se@bolia:/tmp$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+
+azim_se@bolia:/tmp$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h s01_20140325T18462749Z.tif 
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas/Original$ ls
+LasVegas.zip
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas/Original$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas$ cd ..
+(reverse-i-search)`gdal': gdal_translate -srcwin 800 18900 11000 3000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+
+
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
+azim_se@bolia:/data/sstore-data/archive/angelo/Skybox$ زی
+زی: command not found
+azim_se@bolia:/data/sstore-data/archive/angelo/Skybox$ cd 
+azim_se@bolia:~$ cd DATASETS/Worldview4/
+azim_se@bolia:~/DATASETS/Worldview4$ cd test
+azim_se@bolia:~/DATASETS/Worldview4/test$ ls
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev  -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+
+
+
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
 azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -h
 Usage: gdal_translate [--help-general] [--long-usage]
        [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
