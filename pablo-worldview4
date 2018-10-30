@@ -1,0 +1,246 @@
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -h
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+FAILURE: Unknown option name '-h'
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -scale_1 110 676 -scale_2 241 808 -scale_3 292 723 -ot Byte 
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images/
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -scale_1 110 676 -scale_2 241 808 -scale_3 292 723 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ display 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+display: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+azim_se@bolia:~/DATASETS/Worldview4/test$ tiffinfo 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+The program 'tiffinfo' is currently not installed. To run 'tiffinfo' please ask your administrator to install the package 'libtiff-tools'
+You will have to enable the component called 'universe'
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdalinfo 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Driver: GTiff/GeoTIFF
+Files: 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+       17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+Size is 10000, 5000
+Coordinate System is:
+PROJCS["WGS 84 / UTM zone 32N",
+    GEOGCS["WGS 84",
+        DATUM["WGS_1984",
+            SPHEROID["WGS 84",6378137,298.257223563,
+                AUTHORITY["EPSG","7030"]],
+            AUTHORITY["EPSG","6326"]],
+        PRIMEM["Greenwich",0],
+        UNIT["degree",0.0174532925199433],
+        AUTHORITY["EPSG","4326"]],
+    PROJECTION["Transverse_Mercator"],
+    PARAMETER["latitude_of_origin",0],
+    PARAMETER["central_meridian",9],
+    PARAMETER["scale_factor",0.9996],
+    PARAMETER["false_easting",500000],
+    PARAMETER["false_northing",0],
+    UNIT["metre",1,
+        AUTHORITY["EPSG","9001"]],
+    AUTHORITY["EPSG","32632"]]
+Origin = (689975.400000000023283,5335600.200000000186265)
+Pixel Size = (0.300000000000000,-0.300000000000000)
+Metadata:
+  AREA_OR_POINT=Area
+  TIFFTAG_COPYRIGHT=This imagery is subject to copyrights of European Space Imaging GmbH/Space Imaging Middle East and DigitalGlobe, Inc.. Use and distribution of this image and any derived product thereof is subject to the terms of the *_LICENSE.TXT file that is included in this product.
+  TIFFTAG_DATETIME=2018:08:10 15:37:45
+  TIFFTAG_IMAGEDESCRIPTION={
+  bandList = 
+  [
+    2;
+    3;
+    4;
+    5;
+  ]
+}
+Image Structure Metadata:
+  INTERLEAVE=PIXEL
+Corner Coordinates:
+Upper Left  (  689975.400, 5335600.200) ( 11d33'14.44"E, 48d 8'42.93"N)
+Lower Left  (  689975.400, 5334100.200) ( 11d33'12.03"E, 48d 7'54.40"N)
+Upper Right (  692975.400, 5335600.200) ( 11d35'39.48"E, 48d 8'39.68"N)
+Lower Right (  692975.400, 5334100.200) ( 11d35'37.03"E, 48d 7'51.15"N)
+Center      (  691475.400, 5334850.200) ( 11d34'25.74"E, 48d 8'17.05"N)
+Band 1 Block=10000x1 Type=Byte, ColorInterp=Blue
+Band 2 Block=10000x1 Type=Byte, ColorInterp=Green
+Band 3 Block=10000x1 Type=Byte, ColorInterp=Red
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+azim_se@bolia:~/DATASETS/Worldview4/test$ #gdal_translate -scale_1 110 676 -scale_2 241 808 -scale_3 292 723 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -scale 110 676 -scale 241 808 -scale 292 723 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIFInput file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 1 -b 2 -b3 -scale 110 676 -scale 241 808 -scale 292 723 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+FAILURE: Unknown option name '-b3'
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 1 -b 2 -b 3 -scale 110 676 -scale 241 808 -scale 292 723 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -scale 110 676 0 255 -scale 241 808 0 255 -scale 292 723 0 255 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+azim_se@bolia:~/DATASETS/Worldview4/test$ #gdal_translate -scale 110 676 0 255 -scale 241 808 0 255 -scale 292 723 0 255 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 1 -scale 110 676  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIFInput file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 2 -scale 241 808  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 3 -scale 292 723  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_merge.py -h
+Unrecognised command option: -h
+Usage: gdal_merge.py [-o out_filename] [-of out_format] [-co NAME=VALUE]*
+                     [-ps pixelsize_x pixelsize_y] [-tap] [-separate] [-q] [-v] [-pct]
+                     [-ul_lr ulx uly lrx lry] [-init "value [value...]"]
+                     [-n nodata_value] [-a_nodata output_nodata_value]
+                     [-ot datatype] [-createonly] input_files
+                     [--help-general]
+
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_merge.py -separate  -o 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+^Z
+[1]+  Stopped                 geeqie .
+azim_se@bolia:~/DATASETS/Worldview4/test$ bg
+[1]+ geeqie . &
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdalinfo 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Driver: GTiff/GeoTIFF
+Files: 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+       17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+Size is 10000, 5000
+Coordinate System is:
+PROJCS["WGS 84 / UTM zone 32N",
+    GEOGCS["WGS 84",
+        DATUM["WGS_1984",
+            SPHEROID["WGS 84",6378137,298.257223563,
+                AUTHORITY["EPSG","7030"]],
+            AUTHORITY["EPSG","6326"]],
+        PRIMEM["Greenwich",0],
+        UNIT["degree",0.0174532925199433],
+        AUTHORITY["EPSG","4326"]],
+    PROJECTION["Transverse_Mercator"],
+    PARAMETER["latitude_of_origin",0],
+    PARAMETER["central_meridian",9],
+    PARAMETER["scale_factor",0.9996],
+    PARAMETER["false_easting",500000],
+    PARAMETER["false_northing",0],
+    UNIT["metre",1,
+        AUTHORITY["EPSG","9001"]],
+    AUTHORITY["EPSG","32632"]]
+Origin = (689975.400000000023283,5335600.200000000186265)
+Pixel Size = (0.300000000000000,-0.300000000000000)
+Metadata:
+  AREA_OR_POINT=Area
+  TIFFTAG_COPYRIGHT=This imagery is subject to copyrights of European Space Imaging GmbH/Space Imaging Middle East and DigitalGlobe, Inc.. Use and distribution of this image and any derived product thereof is subject to the terms of the *_LICENSE.TXT file that is included in this product.
+  TIFFTAG_DATETIME=2018:08:10 15:37:45
+  TIFFTAG_IMAGEDESCRIPTION={
+  bandList = 
+  [
+    2;
+    3;
+    4;
+    5;
+  ]
+}
+Image Structure Metadata:
+  INTERLEAVE=PIXEL
+Corner Coordinates:
+Upper Left  (  689975.400, 5335600.200) ( 11d33'14.44"E, 48d 8'42.93"N)
+Lower Left  (  689975.400, 5334100.200) ( 11d33'12.03"E, 48d 7'54.40"N)
+Upper Right (  692975.400, 5335600.200) ( 11d35'39.48"E, 48d 8'39.68"N)
+Lower Right (  692975.400, 5334100.200) ( 11d35'37.03"E, 48d 7'51.15"N)
+Center      (  691475.400, 5334850.200) ( 11d34'25.74"E, 48d 8'17.05"N)
+Band 1 Block=10000x1 Type=Byte, ColorInterp=Blue
+Band 2 Block=10000x1 Type=Byte, ColorInterp=Green
+Band 3 Block=10000x1 Type=Byte, ColorInterp=Red
+azim_se@bolia:~/DATASETS/Worldview4/test$ convert 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF -combine 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+ 
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+azim_se@bolia:~/DATASETS/Worldview4/test$ 
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 2 -scale 241 808  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIFInput file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 3 -scale 292 723  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ convert 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF -combine 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+azim_se@bolia:~/DATASETS/Worldview4/test$ 
