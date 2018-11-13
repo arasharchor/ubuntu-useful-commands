@@ -891,3 +891,2360 @@ convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' 
 convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
 convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
 azim_se@bolia:~/DATASETS/Worldview4/test$ 
+######################################################13.11.2018
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -h
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+FAILURE: Unknown option name '-h'
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -scale_1 110 676 -scale_2 241 808 -scale_3 292 723 -ot Byte 
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images/
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -scale_1 110 676 -scale_2 241 808 -scale_3 292 723 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ display 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+display: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+azim_se@bolia:~/DATASETS/Worldview4/test$ tiffinfo 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+The program 'tiffinfo' is currently not installed. To run 'tiffinfo' please ask your administrator to install the package 'libtiff-tools'
+You will have to enable the component called 'universe'
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdalinfo 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Driver: GTiff/GeoTIFF
+Files: 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+       17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+Size is 10000, 5000
+Coordinate System is:
+PROJCS["WGS 84 / UTM zone 32N",
+    GEOGCS["WGS 84",
+        DATUM["WGS_1984",
+            SPHEROID["WGS 84",6378137,298.257223563,
+                AUTHORITY["EPSG","7030"]],
+            AUTHORITY["EPSG","6326"]],
+        PRIMEM["Greenwich",0],
+        UNIT["degree",0.0174532925199433],
+        AUTHORITY["EPSG","4326"]],
+    PROJECTION["Transverse_Mercator"],
+    PARAMETER["latitude_of_origin",0],
+    PARAMETER["central_meridian",9],
+    PARAMETER["scale_factor",0.9996],
+    PARAMETER["false_easting",500000],
+    PARAMETER["false_northing",0],
+    UNIT["metre",1,
+        AUTHORITY["EPSG","9001"]],
+    AUTHORITY["EPSG","32632"]]
+Origin = (689975.400000000023283,5335600.200000000186265)
+Pixel Size = (0.300000000000000,-0.300000000000000)
+Metadata:
+  AREA_OR_POINT=Area
+  TIFFTAG_COPYRIGHT=This imagery is subject to copyrights of European Space Imaging GmbH/Space Imaging Middle East and DigitalGlobe, Inc.. Use and distribution of this image and any derived product thereof is subject to the terms of the *_LICENSE.TXT file that is included in this product.
+  TIFFTAG_DATETIME=2018:08:10 15:37:45
+  TIFFTAG_IMAGEDESCRIPTION={
+  bandList = 
+  [
+    2;
+    3;
+    4;
+    5;
+  ]
+}
+Image Structure Metadata:
+  INTERLEAVE=PIXEL
+Corner Coordinates:
+Upper Left  (  689975.400, 5335600.200) ( 11d33'14.44"E, 48d 8'42.93"N)
+Lower Left  (  689975.400, 5334100.200) ( 11d33'12.03"E, 48d 7'54.40"N)
+Upper Right (  692975.400, 5335600.200) ( 11d35'39.48"E, 48d 8'39.68"N)
+Lower Right (  692975.400, 5334100.200) ( 11d35'37.03"E, 48d 7'51.15"N)
+Center      (  691475.400, 5334850.200) ( 11d34'25.74"E, 48d 8'17.05"N)
+Band 1 Block=10000x1 Type=Byte, ColorInterp=Blue
+Band 2 Block=10000x1 Type=Byte, ColorInterp=Green
+Band 3 Block=10000x1 Type=Byte, ColorInterp=Red
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+azim_se@bolia:~/DATASETS/Worldview4/test$ #gdal_translate -scale_1 110 676 -scale_2 241 808 -scale_3 292 723 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -scale 110 676 -scale 241 808 -scale 292 723 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIFInput file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 1 -b 2 -b3 -scale 110 676 -scale 241 808 -scale 292 723 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+FAILURE: Unknown option name '-b3'
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 1 -b 2 -b 3 -scale 110 676 -scale 241 808 -scale 292 723 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -scale 110 676 0 255 -scale 241 808 0 255 -scale 292 723 0 255 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+azim_se@bolia:~/DATASETS/Worldview4/test$ #gdal_translate -scale 110 676 0 255 -scale 241 808 0 255 -scale 292 723 0 255 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 1 -scale 110 676  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIFInput file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 2 -scale 241 808  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 3 -scale 292 723  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_merge.py -h
+Unrecognised command option: -h
+Usage: gdal_merge.py [-o out_filename] [-of out_format] [-co NAME=VALUE]*
+                     [-ps pixelsize_x pixelsize_y] [-tap] [-separate] [-q] [-v] [-pct]
+                     [-ul_lr ulx uly lrx lry] [-init "value [value...]"]
+                     [-n nodata_value] [-a_nodata output_nodata_value]
+                     [-ot datatype] [-createonly] input_files
+                     [--help-general]
+
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_merge.py -separate  -o 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+^Z
+[1]+  Stopped                 geeqie .
+azim_se@bolia:~/DATASETS/Worldview4/test$ bg
+[1]+ geeqie . &
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdalinfo 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+Driver: GTiff/GeoTIFF
+Files: 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+       17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+Size is 10000, 5000
+Coordinate System is:
+PROJCS["WGS 84 / UTM zone 32N",
+    GEOGCS["WGS 84",
+        DATUM["WGS_1984",
+            SPHEROID["WGS 84",6378137,298.257223563,
+                AUTHORITY["EPSG","7030"]],
+            AUTHORITY["EPSG","6326"]],
+        PRIMEM["Greenwich",0],
+        UNIT["degree",0.0174532925199433],
+        AUTHORITY["EPSG","4326"]],
+    PROJECTION["Transverse_Mercator"],
+    PARAMETER["latitude_of_origin",0],
+    PARAMETER["central_meridian",9],
+    PARAMETER["scale_factor",0.9996],
+    PARAMETER["false_easting",500000],
+    PARAMETER["false_northing",0],
+    UNIT["metre",1,
+        AUTHORITY["EPSG","9001"]],
+    AUTHORITY["EPSG","32632"]]
+Origin = (689975.400000000023283,5335600.200000000186265)
+Pixel Size = (0.300000000000000,-0.300000000000000)
+Metadata:
+  AREA_OR_POINT=Area
+  TIFFTAG_COPYRIGHT=This imagery is subject to copyrights of European Space Imaging GmbH/Space Imaging Middle East and DigitalGlobe, Inc.. Use and distribution of this image and any derived product thereof is subject to the terms of the *_LICENSE.TXT file that is included in this product.
+  TIFFTAG_DATETIME=2018:08:10 15:37:45
+  TIFFTAG_IMAGEDESCRIPTION={
+  bandList = 
+  [
+    2;
+    3;
+    4;
+    5;
+  ]
+}
+Image Structure Metadata:
+  INTERLEAVE=PIXEL
+Corner Coordinates:
+Upper Left  (  689975.400, 5335600.200) ( 11d33'14.44"E, 48d 8'42.93"N)
+Lower Left  (  689975.400, 5334100.200) ( 11d33'12.03"E, 48d 7'54.40"N)
+Upper Right (  692975.400, 5335600.200) ( 11d35'39.48"E, 48d 8'39.68"N)
+Lower Right (  692975.400, 5334100.200) ( 11d35'37.03"E, 48d 7'51.15"N)
+Center      (  691475.400, 5334850.200) ( 11d34'25.74"E, 48d 8'17.05"N)
+Band 1 Block=10000x1 Type=Byte, ColorInterp=Blue
+Band 2 Block=10000x1 Type=Byte, ColorInterp=Green
+Band 3 Block=10000x1 Type=Byte, ColorInterp=Red
+azim_se@bolia:~/DATASETS/Worldview4/test$ convert 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF -combine 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+ 
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+azim_se@bolia:~/DATASETS/Worldview4/test$ 
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 2 -scale 241 808  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIFInput file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 3 -scale 292 723  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ convert 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF -combine 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 3 -scale 292 723  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 3 -scale 292 723  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 3 -scale 264 554  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF
+Input file size is 11000, 3000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 2 -scale 225 615 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF
+Input file size is 11000, 3000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 1 -scale 78 496 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF
+Input file size is 11000, 3000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ convert 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF -combine 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.TIF17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ convert 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_.TIF -combine 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ convert 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G__8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF -combine 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ convert 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF -combine 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+^C
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte of PNG *_8bit.TIF *_PNG.png
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+FAILURE: Too many command options.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte of PNG *_8bit.TIF *.png
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+FAILURE: Too many command options.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte of PNG _8bit.TIF A96_PNG.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte of PNG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF A96_PNG.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte of PNG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF A96_PNG.png
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+FAILURE: Too many command options.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte of PNG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF A96.png
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+FAILURE: Too many command options.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte -of PNG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF A96.png
+Input file size is 11000, 3000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte -of PNG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF Center.png
+Input file size is 10000, 5000
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ mogrify -format png *.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ mogrify -format jpg *.png
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 2 -scale 225 615 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIFInput file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+[1]+  Killed                  geeqie .
+azim_se@bolia:~/DATASETS/Worldview4/test$ convert 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF -combine 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_WHOLE_8bit.TIF
+TIFFWriteDirectoryTagData: Maximum TIFF file size exceeded.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+convert: Maximum TIFF file size exceeded. `TIFFAppendToStrip' @ error/tiff.c/TIFFErrors/568.
+convert: Maximum TIFF file size exceeded. `TIFFWriteDirectoryTagData' @ error/tiff.c/TIFFErrors/568.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ls
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+A96.png
+Center.png
+Center.png.aux.xml
+images
+WV-4_algorithm_output_2.jpg
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.jpg
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4.png
+WV-4up.jpg
+WV-4up.png
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdalbuildvrt 
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.png.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdalbuildvrt 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ vi 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt
+azim_se@bolia:~/DATASETS/Worldview4/test$ vi 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt
+azim_se@bolia:~/DATASETS/Worldview4/test$ vi 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt
+azim_se@bolia:~/DATASETS/Worldview4/test$ qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrtWarning: loading of qgis translation failed [/usr/share/qgis/i18n//qgis_en_US]
+Warning: loading of qt translation failed [/usr/share/qt4/translations/qt_en_US]
+Warning: QGraphicsScene::addItem: item has already been added to this scene
+Warning: void DBusMenuExporterPrivate::addAction(QAction*, int): Already tracking action "Terms of Service / About" under id 212 
+Warning: void DBusMenuExporterPrivate::addAction(QAction*, int): Already tracking action "&Toolbox" under id 326 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+^Z
+[1]+  Stopped                 qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt
+azim_se@bolia:~/DATASETS/Worldview4/test$ bg
+[1]+ qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt &
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte -h
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+FAILURE: Unknown option name '-h'
+[1]+  Killed                  qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -of PNG -ot Byte -projwin 684792 5338809 697673 5329742 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.png
+Input file size is 45386, 33753
+Computed -srcwin 1222 1615 42937 30223 from projected window.
+0.^C
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -of PNG -ot Byte -srcwin 10000 10000 2000 2000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt /tmp/test.png
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie /tmp/test.png
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 8000 8000 6000 6000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt /tmp/test.tif
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h /tmp/test.tif
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+^Z
+[1]+  Stopped                 ~xdibias/FWTools-2.0.6/bin_safe/openev -h /tmp/test.tif
+azim_se@bolia:~/DATASETS/Worldview4/test$ bg
+[1]+ ~xdibias/FWTools-2.0.6/bin_safe/openev -h /tmp/test.tif &
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 8000 8000 6000 6000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.tif /tmp/test.tif
+ERROR 4: `17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.tif' does not exist in the file system,
+and is not recognised as a supported dataset name.
+
+GDALOpen failed - 4
+`17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.tif' does not exist in the file system,
+and is not recognised as a supported dataset name.
+
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 8000 8000 6000 6000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF /tmp/test.tif
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h /tmp/test.tif
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+^Z[1]   Done                    ~xdibias/FWTools-2.0.6/bin_safe/openev -h /tmp/test.tif
+
+[2]+  Stopped                 ~xdibias/FWTools-2.0.6/bin_safe/openev -h /tmp/test.tif
+azim_se@bolia:~/DATASETS/Worldview4/test$ bg
+[2]+ ~xdibias/FWTools-2.0.6/bin_safe/openev -h /tmp/test.tif &
+azim_se@bolia:~/DATASETS/Worldview4/test$ vi 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -of PNG -ot Byte -srcwin 10000 10000 2000 2000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt /tmp/test.png
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie /tmp/test.png
+[2]+  Done                    ~xdibias/FWTools-2.0.6/bin_safe/openev -h /tmp/test.tif
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -of PNG -ot Byte -srcwin 10000 16000 5000 5000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt /tmp/test.png
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie /tmp/test.png
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -of PNG -ot Byte -srcwin 10000 16000 5000 5000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF                           17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml                   17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF                    17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml    17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF                  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF.aux.xml          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF                   17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml           17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF                    17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml    17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF                  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF.aux.xml          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF                    17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml    
+azim_se@bolia:~/DATASETS/Worldview4/test$ vi 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt
+azim_se@bolia:~/DATASETS/Worldview4/test$ source ~xdibias/setenv_xdibias.sh
+azim_se@bolia:~/DATASETS/Worldview4/test$ tile_cmd -h
+Usage: 
+Produces command strings for tiled processing of images.
+
+ABSTRACT
+
+   This program produces commands for tiled processing of images. Given a
+   template commandline, it produces commands that process each tile. The
+   generated commands can then be executed in parallel on multi-core machines
+   using the parallel_exec script.
+
+   tile_cmd expects will substitute the following variables in the template
+   commandline:
+	%xs	x coordinate of upper left pixel of a tile
+	%ys	y coordinate of upper left pixel of a tile
+	%w	width of a tile
+	%h	height of a tile
+	%tile	tile identifier, useful for naming output files
+		starting with 00_00
+        %yt     y tile identifier, starting with 00. Useful
+                for creating subdirectories.
+
+   tile_cmd can be applied to arbitrary commands as well as to
+   xdibias modules.
+
+   Merging the tiles depends on the programmes used during tiled
+   processing and needs to be done seperately, for example
+   by merging images or resulting control point lists
+
+USAGE
+
+    % tile_cmd [options] -i input/image  <command to tile>
+
+    Parallel execution of the commands:
+    % tile_cmd [options] -i input/image  <command to tile> | run_parallel
+
+EXAMPLES
+
+    Create copyimg commands to tile an image into 10000x10000 tiles, with 1000 pixel overlap.
+    Not extremly exciting, but demonstrates the operation
+
+    % tile_cmd -i China/QB1 -r 10000 -c 10000 -xoverlap 1000 -yoverlap 1000 copyimg -i l=China/QB1,xs=%xs,ys=%ys,width=%w,height=%h -o l=default/tile_%tile -d doc=noname
+    copyimg -i l=China/QB1,xs=0,ys=0,widtheight=10000,height=10000 -o l=default/tile_0000 -d doc=noname
+    copyimg -i l=China/QB1,xs=0,ys=10000,widtheight=10000,height=10000 -o l=default/tile_0001 -d doc=noname
+    copyimg -i l=China/QB1,xs=0,ys=20000,widtheight=10000,height=2112 -o l=default/tile_0002 -d doc=noname
+    copyimg -i l=China/QB1,xs=10000,ys=0,widtheight=10000,height=10000 -o l=default/tile_0100 -d doc=noname
+    copyimg -i l=China/QB1,xs=10000,ys=10000,widtheight=10000,height=10000 -o l=default/tile_0101 -d doc=noname
+    copyimg -i l=China/QB1,xs=10000,ys=20000,widtheight=10000,height=2112 -o l=default/tile_0102 -d doc=noname
+    copyimg -i l=China/QB1,xs=20000,ys=0,widtheight=10000,height=10000 -o l=default/tile_0200 -d doc=noname
+    copyimg -i l=China/QB1,xs=20000,ys=10000,widtheight=10000,height=10000 -o l=default/tile_0201 -d doc=noname
+    copyimg -i l=China/QB1,xs=20000,ys=20000,widtheight=10000,height=2112 -o l=default/tile_0202 -d doc=noname
+    copyimg -i l=China/QB1,xs=30000,ys=0,widtheight=5180,height=10000 -o l=default/tile_0300 -d doc=noname
+    copyimg -i l=China/QB1,xs=30000,ys=10000,widtheight=5180,height=10000 -o l=default/tile_0301 -d doc=noname
+    copyimg -i l=China/QB1,xs=30000,ys=20000,widtheight=5180,height=2112 -o l=default/tile_0302 -d doc=noname
+
+
+    Run progress matching on tiles
+
+    % tile_cmd -i China/QB1  runprogress.pl --bnf seed.bnf --output QB_%tile --la China --lf China China/QB1,xs=%xs,ys=%ys,width=%w,height=%h China/QB3,xs=%xs,ys=%ys,width=%w,height=%h
+    runprogress.pl --bnf seed.bnf --output QB_0000 --la China --lf China China/QB1,xs=0,ys=0,width=6000,height=6000 China/QB3,xs=0,ys=0,width=6000,height=6000
+    runprogress.pl --bnf seed.bnf --output QB_0001 --la China --lf China China/QB1,xs=0,ys=5000,width=6000,height=6000 China/QB3,xs=0,ys=5000,width=6000,height=6000
+    [...]
+    runprogress.pl --bnf seed.bnf --output QB_0703 --la China --lf China China/QB1,xs=35000,ys=15000,width=180,height=6000 China/QB3,xs=35000,ys=15000,width=180,height=6000
+    runprogress.pl --bnf seed.bnf --output QB_0704 --la China --lf China China/QB1,xs=35000,ys=20000,width=180,height=2112 China/QB3,xs=35000,ys=20000,width=180,height=2112
+
+AUTHOR:
+	Pablo d'Angelo <pablo.angelo@dlr.de>
+
+
+Options:
+  -h, --help            show this help message and exit
+  -i IMAGE, --image=IMAGE
+                        input image used for reading width and height.
+  --xs=XS               start tiling from this column
+  --ys=YS               start tiling from this row
+  --imagewidth=IMAGEWIDTH
+                        width of image (needed if --image is not specified)
+  --imageheight=IMAGEHEIGHT
+                        height of image (needed if --image is not specified)
+  -c TILEWIDTH, --tilewidth=TILEWIDTH
+                        tile width (pixel), default 1024
+  -r TILEHEIGHT, --tileheight=TILEHEIGHT
+                        tile height (pixel), default 1024
+  -u XOVERLAP, --xoverlap=XOVERLAP
+                        x overlap (pixels) between tiles, default 0
+  -v YOVERLAP, --yoverlap=YOVERLAP
+                        y overlap (pixels) between tiles, default 0
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal
+gdal2tiles.py       gdal_calc.py        gdaldem             gdalident.py        gdal_merge.py       gdal_retile.py      gdaltransform       
+gdal2xyz.py         gdalchksum.py       gdal_edit.py        gdalimport.py       gdalmove.py         gdalserver          gdal_translate      
+gdaladdo            gdalcompare.py      gdalenhance         gdalinfo            gdal_polygonize.py  gdal_sieve.py       gdalwarp            
+gdal_auth.py        gdal-config         gdal_fillnodata.py  gdallocationinfo    gdal_proximity.py   gdalsrsinfo         
+gdalbuildvrt        gdal_contour        gdal_grid           gdalmanage          gdal_rasterize      gdaltindex          
+azim_se@bolia:~/DATASETS/Worldview4/test$ merge
+merge             mergeP5.py        mergePointClouds  mergetiles        
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdalinfo 
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF                           17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml                   17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF                    17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml    17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF                  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF.aux.xml          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF                   17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml           17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF                    17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml    A96.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF                  Center.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF.aux.xml          Center.png.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF                    images/
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml            tiff-jpg-conversion-worldview4.py
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF            WV-4_algorithm_output_2.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml    WV-4_algorithm_output_2.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF                     WV-4_algorithm_output.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml             WV-4_algorithm_output.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip                 WV-4.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt                     WV-4_overlaid_algorithm.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg                      WV-4_overlaid_algorithm.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg.aux.xml              WV-4_overlaid_algorithm.xcf
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.png                      WV-4.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF                      WV-4up.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF.aux.xml              WV-4up.png
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdalinfo 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+Driver: GTiff/GeoTIFF
+Files: 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+       17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+       17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+Size is 45386, 33753
+Coordinate System is:
+PROJCS["WGS 84 / UTM zone 32N",
+    GEOGCS["WGS 84",
+        DATUM["WGS_1984",
+            SPHEROID["WGS 84",6378137,298.257223563,
+                AUTHORITY["EPSG","7030"]],
+            AUTHORITY["EPSG","6326"]],
+        PRIMEM["Greenwich",0],
+        UNIT["degree",0.0174532925199433],
+        AUTHORITY["EPSG","4326"]],
+    PROJECTION["Transverse_Mercator"],
+    PARAMETER["latitude_of_origin",0],
+    PARAMETER["central_meridian",9],
+    PARAMETER["scale_factor",0.9996],
+    PARAMETER["false_easting",500000],
+    PARAMETER["false_northing",0],
+    UNIT["metre",1,
+        AUTHORITY["EPSG","9001"]],
+    AUTHORITY["EPSG","32632"]]
+Origin = (684425.400000000023283,5339293.500000000000000)
+Pixel Size = (0.300000000000000,-0.300000000000000)
+Metadata:
+  AREA_OR_POINT=Area
+  TIFFTAG_COPYRIGHT=This imagery is subject to copyrights of European Space Imaging GmbH/Space Imaging Middle East and DigitalGlobe, Inc.. Use and distribution of this image and any derived product thereof is subject to the terms of the *_LICENSE.TXT file that is included in this product.
+  TIFFTAG_DATETIME=2018:08:10 15:37:45
+  TIFFTAG_IMAGEDESCRIPTION={
+  bandList = 
+  [
+    2;
+    3;
+    4;
+    5;
+  ]
+}
+  TIFFTAG_MAXSAMPLEVALUE=2047
+  TIFFTAG_MINSAMPLEVALUE=0
+Image Structure Metadata:
+  INTERLEAVE=BAND
+Corner Coordinates:
+Upper Left  (  684425.400, 5339293.500) ( 11d28'51.86"E, 48d10'48.32"N)
+Lower Left  (  684425.400, 5329167.600) ( 11d28'36.08"E, 48d 5'20.66"N)
+Upper Right (  698041.200, 5339293.500) ( 11d39'50.57"E, 48d10'33.57"N)
+Lower Right (  698041.200, 5329167.600) ( 11d39'33.62"E, 48d 5' 5.96"N)
+Center      (  691233.300, 5334230.550) ( 11d34'13.04"E, 48d 7'57.26"N)
+Band 1 Block=45386x11 Type=UInt16, ColorInterp=Red
+  Min=0.000 Max=2047.000 
+  Minimum=0.000, Maximum=2047.000, Mean=337.268, StdDev=131.871
+  Overviews: 22693x16877, 11347x8439, 5674x4220, 2837x2110, 1419x1055, 710x528, 355x264, 178x132, 89x66
+  Metadata:
+    STATISTICS_MAXIMUM=2047
+    STATISTICS_MEAN=337.26759006153
+    STATISTICS_MINIMUM=0
+    STATISTICS_STDDEV=131.87076563496
+Band 2 Block=45386x11 Type=UInt16, ColorInterp=Green
+  Min=0.000 Max=2047.000 
+  Minimum=0.000, Maximum=2047.000, Mean=330.865, StdDev=147.837
+  Overviews: 22693x16877, 11347x8439, 5674x4220, 2837x2110, 1419x1055, 710x528, 355x264, 178x132, 89x66
+  Metadata:
+    STATISTICS_MAXIMUM=2047
+    STATISTICS_MEAN=330.86496543931
+    STATISTICS_MINIMUM=0
+    STATISTICS_STDDEV=147.83702713457
+Band 3 Block=45386x11 Type=UInt16, ColorInterp=Blue
+  Min=0.000 Max=2047.000 
+  Minimum=0.000, Maximum=2047.000, Mean=199.941, StdDev=133.552
+  Overviews: 22693x16877, 11347x8439, 5674x4220, 2837x2110, 1419x1055, 710x528, 355x264, 178x132, 89x66
+  Metadata:
+    STATISTICS_MAXIMUM=2047
+    STATISTICS_MEAN=199.94127379803
+    STATISTICS_MINIMUM=0
+    STATISTICS_STDDEV=133.5524712738
+Band 4 Block=45386x11 Type=UInt16, ColorInterp=Undefined
+  Overviews: 22693x16877, 11347x8439, 5674x4220, 2837x2110, 1419x1055, 710x528, 355x264, 178x132, 89x66
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -of PNG -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.vrt 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.png
+
+
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 3 -scale 264 554  -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF
+Input file size is 45386, 33753
+
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
+azim_se@bolia:/data/sstore-data/archive/angelo/Skybox$ زی
+زی: command not found
+azim_se@bolia:/data/sstore-data/archive/angelo/Skybox$ cd 
+azim_se@bolia:~$ cd DATASETS/Worldview4/
+azim_se@bolia:~/DATASETS/Worldview4$ cd test
+azim_se@bolia:~/DATASETS/Worldview4/test$ ls
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev  -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+^CTraceback (most recent call last):
+  File "/home/xdibias/FWTools-2.0.6/lib/python2.2/site-packages/gtk.py", line 117, in __call__
+    def __call__(self, *args):
+KeyboardInterrupt
+
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev  -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev  -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev  -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev  -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev  -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+ERROR 1: 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF is neither a file or directory, Geoconcept access failed.
+
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev  -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev  -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev  -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev  -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+ERROR 1: 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF is neither a file or directory, Geoconcept access failed.
+
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -b 1 -scale 78 496 -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ CUDA_VISIBLE_DEVICES=3^Cazim_se@bolia:~/DATASETS/Worldview4/test$ 
+
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
+azim_se@bolia:~$ cd '/home/azim_se/DATASETS/Worldview4/test' azim_se@bolia:~/DATASETS/Worldview4/test$ openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+openev: command not found
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+ERROR 1: 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF is neither a file or directory, Geoconcept access failed.
+
+
+
+^C
+
+^Z
+[1]+  Stopped                 ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ kill %1
+azim_se@bolia:~/DATASETS/Worldview4/test$ 
+[1]+  Terminated              ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ 
+azim_se@bolia:~/DATASETS/Worldview4/test$ qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+Warning: loading of qgis translation failed [/usr/share/qgis/i18n//qgis_en_US]
+Warning: loading of qt translation failed [/usr/share/qt4/translations/qt_en_US]
+Warning: QGraphicsScene::addItem: item has already been added to this scene
+Warning: void DBusMenuExporterPrivate::addAction(QAction*, int): Already tracking action "Terms of Service / About" under id 212 
+Warning: void DBusMenuExporterPrivate::addAction(QAction*, int): Already tracking action "&Toolbox" under id 326 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+^Z
+[1]+  Stopped                 qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ bg
+[1]+ qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF &
+azim_se@bolia:~/DATASETS/Worldview4/test$ ls
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 18500 12311 10000 10000 
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images/
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 18500 12311 10000 10000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ display 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+display: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+display: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/881.
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie 
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images/
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ geeqie 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+Address already in use: /home/azim_se/.config/geeqie/.command
+
+
+^Z
+[2]+  Stopped                 geeqie 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ bg
+[2]+ geeqie 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF &
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 18500 12311 10000 10000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 18500 12311 10000 10000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+images/
+WV-4_algorithm_output_2.png
+WV-4_algorithm_output.png
+WV-4.jpg
+WV-4_overlaid_algorithm.png
+WV-4_overlaid_algorithm.xcf
+WV-4up.jpg
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+[2]+  Done                    geeqie 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 18500 12311 10000 5000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ #gdal_translate -srcwin 18500 12311 10000 5000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+azim_se@bolia:~/DATASETS/Worldview4/test$ ipython
+Python 2.7.12 (default, Nov 20 2017, 18:23:56) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.4.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]:                                                                         
+Do you really want to exit ([y]/n)? y
+azim_se@bolia:~/DATASETS/Worldview4/test$ ipython
+Python 2.7.12 (default, Nov 20 2017, 18:23:56) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.4.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: (684668-684425)/0.3
+Out[1]: 810.0
+
+In [2]: (5339293-5333615)/0.3
+Out[2]: 18926.666666666668
+
+In [3]:                                                                         
+Do you really want to exit ([y]/n)? y
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 3000 10000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 10000 3000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIFSetup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 11000 3000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIFSetup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 11000 3000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+ERROR 4: `17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_16bit.TIF' does not exist in the file system,
+and is not recognised as a supported dataset name.
+
+GDALOpen failed - 4
+`17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_16bit.TIF' does not exist in the file system,
+and is not recognised as a supported dataset name.
+
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 11000 3000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+azim_se@bolia:~/DATASETS/Worldview4/test$ gdal_translate -srcwin 800 18900 11000 3000 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_.TIF17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+azim_se@bolia:~/DATASETS/Worldview4/test$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+azim_se@bolia:~/DATASETS/Worldview4/test$ cd
+azim_se@bolia:~$ cd /sstore
+ls
+azim_se@bolia:/sstore$ ls
+archive  argos  backup  catena  data  projects  referenzen  tmp
+azim_se@bolia:/sstore$ cd archive
+azim_se@bolia:/sstore/archive$ cd angelo/
+azim_se@bolia:/sstore/archive/angelo$ ls
+Aerial      Earth-I          Nepal_WV_GeoEye  PRISM   test         Worldview-2
+Cartosat-1  GeoEye           P5               Skybox  TH-01        Worldview-3
+CORONA      IKONOS           PlanetLabs       SPOT5   Urthecast    Worldview-4
+Deimos-2    Juelich_Listner  Pleiades         SPOT-6  Worldview-1  ZY3
+azim_se@bolia:/sstore/archive/angelo$ cd S
+Skybox/ SPOT5/  SPOT-6/ 
+azim_se@bolia:/sstore/archive/angelo$ cd Skybox/
+azim_se@bolia:/sstore/archive/angelo/Skybox$ ls
+Chicago_Still  LasVegas  media                   Russland-Mirny-Mine
+Fos-Sur-Mer    Lima      München-Theresienwiese
+azim_se@bolia:/sstore/archive/angelo/Skybox$ cd München-Theresienwiese/
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese$ ls
+s01_20140407T101256Z
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese$ cd s01_20140407T101256Z/
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ ls
+5_video_frames  s01_20140407T101256Z_metadata.txt  video_frames
+EULA.pdf        video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ cd video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video$ ls
+s01_20140407T101256Z.mp4            s01_20140407T101256Z_thumbnail.png
+s01_20140407T101256Z_thumbnail.mp4
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video$ mplayer s01_20140407T101256Z.mp4 
+Creating config file: /home/azim_se/.mplayer/config
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+mplayer: could not connect to socket
+mplayer: No such file or directory
+Failed to open LIRC support. You will not be able to use your remote control.
+
+Playing s01_20140407T101256Z.mp4.
+libavformat version 56.40.101 (external)
+libavformat file format detected.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7fa8c9e23d80]Protocol name not provided, cannot determine if input is local or a network protocol, buffers and access patterns cannot be configured optimally without knowing the protocol
+[lavf] stream 0: video (h264), -vid 0
+VIDEO:  [H264]  1920x1080  24bpp  29.996 fps  13784.7 kbps (1682.7 kbyte/s)
+Clip info:
+ major_brand: isom
+ minor_version: 512
+ compatible_brands: isomiso2avc1mp41
+ encoder: Lavf54.6.100
+Load subtitles in ./
+==========================================================================
+Opening video decoder: [ffmpeg] FFmpeg's libavcodec codec family
+libavcodec version 56.60.100 (external)
+Selected video codec: [ffh264] vfm: ffmpeg (FFmpeg H.264)
+==========================================================================
+Audio: no sound
+Starting playback...
+Movie-Aspect is 1.78:1 - prescaling to correct movie aspect.
+VO: [vdpau] 1920x1080 => 1920x1080 Planar YV12 
+[ASPECT] Warning: No suitable new res found!
+[ASPECT] Warning: No suitable new res found!
+V:  30.0   0/  0 52%  3%  0.0% 0 0 
+
+
+Exiting... (End of file)
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video$ ls
+s01_20140407T101256Z.mp4            s01_20140407T101256Z_thumbnail.png
+s01_20140407T101256Z_thumbnail.mp4
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ ls
+5_video_frames  s01_20140407T101256Z_metadata.txt  video_frames
+EULA.pdf        video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ cd video_frames/
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video_frames$ ls
+^C^C
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video_frames$ ls
+^C^C^C^C^C
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video_frames$ ^C
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/video_frames$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ ls
+5_video_frames  s01_20140407T101256Z_metadata.txt  video_frames
+EULA.pdf        video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ cd 5_video_frames/
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/5_video_frames$ ls
+s01_20140407T10125621Z_rpc.txt         s01_20140407T10130935Z_rpc.txt.AFFTRS
+s01_20140407T10125621Z_rpc.txt.AFFTRS  s01_20140407T10130935Z.tif
+s01_20140407T10125621Z.tif             s01_20140407T10131618Z_rpc.txt
+s01_20140407T101256Z_metadata.txt      s01_20140407T10131618Z_rpc.txt.AFFTRS
+s01_20140407T10130158Z_rpc.txt         s01_20140407T10131618Z.tif
+s01_20140407T10130158Z_rpc.txt.AFFTRS  s01_20140407T10132619Z_rpc.txt
+s01_20140407T10130158Z.tif             s01_20140407T10132619Z_rpc.txt.AFFTRS
+s01_20140407T10130935Z_rpc.txt         s01_20140407T10132619Z.tif
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/5_video_frames$ ^C
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z/5_video_frames$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ ls
+5_video_frames  s01_20140407T101256Z_metadata.txt  video_frames
+EULA.pdf        video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ ls
+5_video_frames  s01_20140407T101256Z_metadata.txt  video_frames
+EULA.pdf        video
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese/s01_20140407T
+101256Z$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese$ ls
+s01_20140407T101256Z
+azim_se@bolia:/sstore/archive/angelo/Skybox/München-Theresienwiese$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox$ ls
+Chicago_Still  LasVegas  media                   Russland-Mirny-Mine
+Fos-Sur-Mer    Lima      München-Theresienwiese
+azim_se@bolia:/sstore/archive/angelo/Skybox$ cd Lima/
+azim_se@bolia:/sstore/archive/angelo/Skybox/Lima$ ls
+s01_20140324T154105Z_metadata.txt   s01_20140324T154105Z_thumbnail.png
+s01_20140324T154105Z_thumbnail.kml  s01_20140324T154105Z.zip
+azim_se@bolia:/sstore/archive/angelo/Skybox/Lima$ mc
+
+azim_se@bolia:/tmp$ mplayer s01_20140610T041419Z.mp4
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+mplayer: could not connect to socket
+mplayer: No such file or directory
+Failed to open LIRC support. You will not be able to use your remote control.
+
+Playing s01_20140610T041419Z.mp4.
+libavformat version 56.40.101 (external)
+libavformat file format detected.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0591c22d80]Protocol name not provided, cannot determine if input is local or a network protocol, buffers and access patterns cannot be configured optimally without knowing the protocol
+[lavf] stream 0: video (h264), -vid 0
+VIDEO:  [H264]  1920x1080  24bpp  29.996 fps  4059.1 kbps (495.5 kbyte/s)
+Clip info:
+ major_brand: isom
+ minor_version: 512
+ compatible_brands: isomiso2avc1mp41
+ encoder: Lavf54.6.100
+Load subtitles in ./
+==========================================================================
+Opening video decoder: [ffmpeg] FFmpeg's libavcodec codec family
+libavcodec version 56.60.100 (external)
+Selected video codec: [ffh264] vfm: ffmpeg (FFmpeg H.264)
+==========================================================================
+Audio: no sound
+Starting playback...
+Movie-Aspect is 1.78:1 - prescaling to correct movie aspect.
+VO: [vdpau] 1920x1080 => 1920x1080 Planar YV12 
+[ASPECT] Warning: No suitable new res found!
+[ASPECT] Warning: No suitable new res found!
+V:  60.0   0/  0 37%  4%  0.0% 0 0 
+
+
+Exiting... (End of file)
+
+azim_se@bolia:/sstore/archive/angelo/Skybox/Lima$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox$ ls
+Chicago_Still  LasVegas  media                   Russland-Mirny-Mine
+Fos-Sur-Mer    Lima      München-Theresienwiese
+azim_se@bolia:/sstore/archive/angelo/Skybox$ cd LasVegas
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas$ ls
+Original
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas$ cd Original/
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas/Original$ ls
+LasVegas.zip
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas/Original$ 
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas/Original$ mc
+
+azim_se@bolia:/tmp$ mplayer s01_20140325T184627Z.mp4 
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+mplayer: could not connect to socket
+mplayer: No such file or directory
+Failed to open LIRC support. You will not be able to use your remote control.
+
+Playing s01_20140325T184627Z.mp4.
+libavformat version 56.40.101 (external)
+libavformat file format detected.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7ff4257ded80]Protocol name not provided, cannot determine if input is local or a network protocol, buffers and access patterns cannot be configured optimally without knowing the protocol
+[lavf] stream 0: video (h264), -vid 0
+VIDEO:  [H264]  1920x1080  24bpp  29.996 fps  4055.2 kbps (495.0 kbyte/s)
+Clip info:
+ major_brand: isom
+ minor_version: 512
+ compatible_brands: isomiso2avc1mp41
+ encoder: Lavf54.6.100
+Load subtitles in ./
+==========================================================================
+Opening video decoder: [ffmpeg] FFmpeg's libavcodec codec family
+libavcodec version 56.60.100 (external)
+Selected video codec: [ffh264] vfm: ffmpeg (FFmpeg H.264)
+==========================================================================
+Audio: no sound
+Starting playback...
+Movie-Aspect is 1.78:1 - prescaling to correct movie aspect.
+VO: [vdpau] 1920x1080 => 1920x1080 Planar YV12 
+[ASPECT] Warning: No suitable new res found!
+[ASPECT] Warning: No suitable new res found!
+V:  60.0   0/  0 33%  4%  0.0% 0 0 
+
+
+Exiting... (End of file)
+
+azim_se@bolia:/tmp$ geeqie .
+Address already in use: /home/azim_se/.config/geeqie/.command
+
+azim_se@bolia:/tmp$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h s01_20140325T18462749Z.tif 
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas/Original$ ls
+LasVegas.zip
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas/Original$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox/LasVegas$ cd ..
+azim_se@bolia:/sstore/archive/angelo/Skybox$ gdal_translate 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_whole.TIF
+ERROR 4: `17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF' does not exist in the file system,
+and is not recognised as a supported dataset name.
+
+GDALOpen failed - 4
+`17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF' does not exist in the file system,
+and is not recognised as a supported dataset name.
+
+azim_se@bolia:/sstore/archive/angelo/Skybox$ ~xdibias/FWTools-2.0.6/bin_safe/openev -h 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+Setup for user installed hardware acceleration
+
+Gtk-WARNING **: Failed to load module "libgail.so": libgail.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libatk-bridge.so": libatk-bridge.so: cannot open shared object file: No such file or directory
+
+Gtk-WARNING **: Failed to load module "libunity-gtk-module.so": libunity-gtk-module.so: cannot open shared object file: No such file or directory
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_raw.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/rendertest.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/imgproctemplate.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/compose.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/reproject.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_ShapesGrid.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/isodata.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/gvrastertools.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_autopan.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/calculator.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_DriverList.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/wmstool.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/Tool_Export.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/fft.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/mil_symbols.py
+Loading tools from /home/xdibias/FWTools-2.0.6/bin/../tools/open_subarea.py
+ERROR 1: 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF is neither a file or directory, Geoconcept access failed.
+
+[1]+  Done                    qgis 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF  (wd: ~/DATASETS/Worldview4/test)
+(wd now: /sstore/archive/angelo/Skybox)
+azim_se@bolia:/sstore/archive/angelo/Skybox$ 
+
+
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
+azim_se@bolia:~$ ssh -X othrys2
+azim_se@othrys2's password: 
+Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-66-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+833 Software-Pakete können aktualisiert werden.
+494 Aktualisierungen sind Sicherheitsaktualisierungen.
+
+New release '18.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+To use GPU devices you need to type: GPUBook <Num-devices-to-use>
+
+Last login: Fri Oct 26 11:33:27 2018 from 129.247.184.96
+
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+-bash: /home/azim_se/.bashrc: Zeile 350: Syntaxfehler: Unerwartetes Dateiende.
+azim_se@othrys2:~$ screen -list
+There are screens on:
+	920.wacken	(25.07.2018 18:12:46)	(Attached)
+	1175.vehicle	(20.06.2018 16:30:57)	(Attached)
+	8753.lane	(08.06.2018 15:31:22)	(Attached)
+3 Sockets in /var/run/screen/S-azim_se.
+azim_se@othrys2:~$ python dlr-segmentation_evaluation.py --mode test --dataset SingleVehicleDLR_512_aug --batch_size 1  --model FC-DenseNet67 --crop_height 512 --crop_width 512 --kernel_size 512;^Cazim_seazim_se@othrys2:~$ htop
+azim_se@othrys2:~$ source .profile
+workon azim_se@othrys2:~$ workon objdetTF3
+(objdetTF3) azim_se@othrys2:~$ cd MyProjects
+(objdetTF3) azim_se@othrys2:~/MyProjects$ cd ..
+(objdetTF3) azim_se@othrys2:~$ cd DATASETS/Worldview4/test/images/
+(objdetTF3) azim_se@othrys2:~/DATASETS/Worldview4/test/images$ ls
+A96.jpg  A96.png  Center.jpg  Center.png  tile
+(objdetTF3) azim_se@othrys2:~/DATASETS/Worldview4/test/images$ cd ..
+(objdetTF3) azim_se@othrys2:~/DATASETS/Worldview4/test$ ls
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF                         17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml                 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml    17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF                  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF                     A96.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml             Center.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip                 Center.png.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF                      images
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF                17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF.aux.xml              tiff-jpg-conversion-worldview4.py
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF.aux.xml        17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF                  WV-4_algorithm_output_2.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF                 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF                       WV-4_algorithm_output_2.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml         17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml               WV-4_algorithm_output.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF                  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF          WV-4_algorithm_output.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml  WV-4.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF               WV-4_overlaid_algorithm.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml       WV-4_overlaid_algorithm.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF                17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_WHOLE_8bit.TIF                WV-4_overlaid_algorithm.xcf
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF.aux.xml        17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF                  WV-4.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF                  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF.aux.xml          WV-4up.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF                               WV-4up.png
+(objdetTF3) azim_se@othrys2:~/DATASETS/Worldview4/test$ ls
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF                         17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF            17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml                 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml    17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF.ovr
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF                  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF                     A96.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml             Center.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip                 Center.png.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF                      images
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF                17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF.aux.xml              tiff-jpg-conversion-worldview4.py
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF.aux.xml        17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF                  WV-4_algorithm_output_2.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF                 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF                       WV-4_algorithm_output_2.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml         17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml               WV-4_algorithm_output.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF                  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF          WV-4_algorithm_output.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml  WV-4.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF               WV-4_overlaid_algorithm.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml       WV-4_overlaid_algorithm.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF                17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_WHOLE_8bit.TIF                WV-4_overlaid_algorithm.xcf
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF.aux.xml        17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF                  WV-4.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF                  17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF.aux.xml          WV-4up.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml          17MAY29101200-S2AS-18EUSI-2177-Munich-WV4.TIF                               WV-4up.png
+(objdetTF3) azim_se@othrys2:~/DATASETS/Worldview4/test$ python tiff-jpg-conversion-worldview4.py 
+Traceback (most recent call last):
+  File "tiff-jpg-conversion-worldview4.py", line 9, in <module>
+    values = dataset.ReadAsArray()
+NameError: name 'dataset' is not defined
+(objdetTF3) azim_se@othrys2:~/DATASETS/Worldview4/test$ python tiff-jpg-conversion-worldview4.py 
+^C^C^CTraceback (most recent call last):
+  File "tiff-jpg-conversion-worldview4.py", line 11, in <module>
+    values = ds.ReadAsArray()
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/osgeo/gdal.py", line 827, in ReadAsArray
+    return gdalnumeric.DatasetReadAsArray( self, xoff, yoff, xsize, ysize, buf_obj )
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/osgeo/gdal_array.py", line 227, in DatasetReadAsArray
+    xoff, yoff, xsize, ysize)
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/osgeo/gdal_array.py", line 274, in BandReadAsArray
+    ar, datatype ) != 0:
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/osgeo/gdal_array.py", line 105, in BandRasterIONumPy
+    return _gdal_array.BandRasterIONumPy(*args, **kwargs)
+KeyboardInterrupt
+(objdetTF3) azim_se@othrys2:~/DATASETS/Worldview4/test$ python tiff-jpg-conversion-worldview4.py 
+^CTraceback (most recent call last):
+  File "tiff-jpg-conversion-worldview4.py", line 11, in <module>
+    values = ds.ReadAsArray()
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/osgeo/gdal.py", line 827, in ReadAsArray
+    return gdalnumeric.DatasetReadAsArray( self, xoff, yoff, xsize, ysize, buf_obj )
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/osgeo/gdal_array.py", line 230, in DatasetReadAsArray
+    return numpy.concatenate( array_list )
+KeyboardInterrupt
+(objdetTF3) azim_se@othrys2:~/DATASETS/Worldview4/test$ import gdal
+(objdetTF3) azim_se@othrys2:~/DATASETS/Worldview4/test$ import numpy as np
+^C(objdetTF3) azim_se@othrys2:~/DATASETS/Worldview4/test$ python
+Python 3.5.2 (default, Nov 17 2016, 17:05:23) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import gdal
+>>> import numpy as np
+>>> # import skimage
+... import cv2
+>>> import PIL
+>>> import scipy.misc
+>>> 
+>>> # reading the tif 16 bit image
+... ds = gdal.Open("17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF",gdal.GA_ReadOnly)
+>>> # convert to array
+... values = ds.ReadAsArray()
+
+>>> print(np.shape(values))
+(3, 33753, 45386)
+>>> 
+>>> values_trans = np.transpose(values, (1, 2, 0))
+>>> np.shape(values_trans)
+(33753, 45386, 3)
+>>> scipy.misc.imsave('outfile.jpg', values_trans)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/numpy/lib/utils.py", line 101, in newfunc
+    return func(*args, **kwds)
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/scipy/misc/pilutil.py", line 217, in imsave
+    im = toimage(arr, channel_axis=2)
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/numpy/lib/utils.py", line 101, in newfunc
+    return func(*args, **kwds)
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/scipy/misc/pilutil.py", line 408, in toimage
+    image = Image.frombytes(mode, shape, strdata)
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/PIL/Image.py", line 2336, in frombytes
+    im.frombytes(data, decoder_name, args)
+  File "/home/azim_se/.virtualenvs/objdetTF3/lib/python3.5/site-packages/PIL/Image.py", line 785, in frombytes
+    s = d.decode(data)
+OverflowError: size does not fit in an int
+>>> X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+X11 connection rejected because of wrong authentication.
+>>> 
+(objdetTF3) azim_se@othrys2:~/DATASETS/Worldview4/test$ cd ..
+
+
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 350: syntax error: unexpected end of file
+azim_se@bolia:~$ gdal
+gdal2tiles.py       gdal_edit.py        gdal_polygonize.py
+gdal2xyz.py         gdalenhance         gdal_proximity.py
+gdaladdo            gdal_fillnodata.py  gdal_rasterize
+gdal_auth.py        gdal_grid           gdal_retile.py
+gdalbuildvrt        gdalident.py        gdalserver
+gdal_calc.py        gdalimport.py       gdal_sieve.py
+gdalchksum.py       gdalinfo            gdalsrsinfo
+gdalcompare.py      gdallocationinfo    gdaltindex
+gdal-config         gdalmanage          gdaltransform
+gdal_contour        gdal_merge.py       gdal_translate
+gdaldem             gdalmove.py         gdalwarp
+azim_se@bolia:~$ ssh othrys2
+azim_se@othrys2's password: 
+Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-66-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+810 Software-Pakete können aktualisiert werden.
+476 Aktualisierungen sind Sicherheitsaktualisierungen.
+
+New release '18.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+To use GPU devices you need to type: GPUBook <Num-devices-to-use>
+
+Last login: Fri Oct 26 11:48:02 2018 from 129.247.184.96
+
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+-bash: /home/azim_se/.bashrc: Zeile 350: Syntaxfehler: Unerwartetes Dateiende.
+azim_se@othrys2:~$ gdalinfo 
+Usage: gdalinfo [--help-general] [-mm] [-stats] [-hist] [-nogcp] [-nomd]
+                [-norat] [-noct] [-nofl] [-checksum] [-proj4]
+                [-listmdd] [-mdd domain|`all`]*
+                [-sd subdataset] datasetname
+
+FAILURE: No datasource specified.
+azim_se@othrys2:~$ gdal_translate 
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+FAILURE: No source dataset specified.
+azim_se@othrys2:~$ gdal_translate  --long-usage
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+GDAL 1.11.3, released 2015/09/16
+
+The following format drivers are configured and support output:
+  VRT: Virtual Raster
+  GTiff: GeoTIFF
+  NITF: National Imagery Transmission Format
+  HFA: Erdas Imagine Images (.img)
+  ELAS: ELAS
+  AAIGrid: Arc/Info ASCII Grid
+  DTED: DTED Elevation Raster
+  PNG: Portable Network Graphics
+  JPEG: JPEG JFIF
+  MEM: In Memory Raster
+  GIF: Graphics Interchange Format (.gif)
+  XPM: X11 PixMap Format
+  BMP: MS Windows Device Independent Bitmap
+  PCIDSK: PCIDSK Database File
+  PCRaster: PCRaster Raster File
+  ILWIS: ILWIS Raster Map
+  SGI: SGI Image File Format 1.0
+  SRTMHGT: SRTMHGT File Format
+  Leveller: Leveller heightfield
+  Terragen: Terragen heightfield
+  GMT: GMT NetCDF Grid Format
+  netCDF: Network Common Data Format
+  HDF4Image: HDF4 Dataset
+  ISIS2: USGS Astrogeology ISIS cube (Version 2)
+  ERS: ERMapper .ers Labelled
+  JP2OpenJPEG: JPEG-2000 driver based on OpenJPEG library
+  FIT: FIT Image
+  JPEG2000: JPEG-2000 part 1 (ISO/IEC 15444-1)
+  RMF: Raster Matrix Format
+  WMS: OGC Web Map Service
+  RST: Idrisi Raster A.1
+  INGR: Intergraph Raster
+  GSAG: Golden Software ASCII Grid (.grd)
+  GSBG: Golden Software Binary Grid (.grd)
+  GS7BG: Golden Software 7 Binary Grid (.grd)
+  R: R Object Data Store
+  PNM: Portable Pixmap Format (netpbm)
+  ENVI: ENVI .hdr Labelled
+  EHdr: ESRI .hdr Labelled
+  PAux: PCI .aux Labelled
+  MFF: Vexcel MFF Raster
+  MFF2: Vexcel MFF2 (HKV) Raster
+  BT: VTP .bt (Binary Terrain) 1.3 Format
+  LAN: Erdas .LAN/.GIS
+  IDA: Image Data and Analysis
+  LCP: FARSITE v.4 Landscape File (.lcp)
+  GTX: NOAA Vertical Datum .GTX
+  NTv2: NTv2 Datum Grid Shift
+  CTable2: CTable2 Datum Grid Shift
+  KRO: KOLOR Raw
+  ARG: Azavea Raster Grid format
+  USGSDEM: USGS Optional ASCII DEM (and CDED)
+  ADRG: ARC Digitized Raster Graphics
+  BLX: Magellan topo (.blx)
+  Rasterlite: Rasterlite
+  EPSILON: Epsilon wavelets
+  PostGISRaster: PostGIS Raster driver
+  SAGA: SAGA GIS Binary Grid (.sdat)
+  KMLSUPEROVERLAY: Kml Super Overlay
+  XYZ: ASCII Gridded XYZ
+  HF2: HF2/HFZ heightfield raster
+  PDF: Geospatial PDF
+  WEBP: WEBP
+  ZMap: ZMap Plus Grid
+azim_se@othrys2:~$ ipython
+Python 2.7.12 (default, Nov 19 2016, 06:48:10) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 2.4.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: import gdal
+
+In [2]: 
+Do you really want to exit ([y]/n)? 
+azim_se@othrys2:~$ echo $LD_LIBRARY_PATH 
+/home/azim_se/softwares/cuDNN/9.0-v7.0.5-ubuntu16.04/lib64:/home/azim_se/MyProjects/pytorch/eigen3:/home/azim_se/MyProjects/pytorch/eigen3/build:/usr/local/cuda-9.0/lib64:/usr/local/opencv-3.4.1/lib/x86_64-linux-gnu:/home/azim_se/softwares/tensorRT/4.0.0.3-ubuntu16.04-cuda9.0-cudnn7.0.5/lib:/home/azim_se/.local/lib:/home/azim_se/MyProjects/pytorch/nccl/compiled/lib
+azim_se@othrys2:~$ echo $PYTHONPATH 
+:/home/azim_se/MyProjects/DOTA-detection/ModelsTF/research:/home/azim_se/MyProjects/DOTA-detection/ModelsTF/research/slim
+azim_se@othrys2:~$ ipython
+Python 2.7.12 (default, Nov 19 2016, 06:48:10) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 2.4.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: import gd
+Caching the list of root modules, please wait!
+(This will only be done once - type '%rehashx' to reset cache!)
+
+
+gdal         gdalconst    gdalnumeric  
+
+In [1]: import gdal
+
+In [2]: gdal._
+gdal.__builtins__      gdal.__dict__          gdal.__format__        gdal.__init__          gdal.__package__       gdal.__repr__          gdal.__str__           
+gdal.__class__         gdal.__doc__           gdal.__getattribute__  gdal.__name__          gdal.__reduce__        gdal.__setattr__       gdal.__subclasshook__  
+gdal.__delattr__       gdal.__file__          gdal.__hash__          gdal.__new__           gdal.__reduce_ex__     gdal.__sizeof__        
+
+In [2]: gdal.__f
+gdal.__file__    gdal.__format__  
+
+In [2]: gdal.__file__
+Out[2]: '/usr/lib/python2.7/dist-packages/gdal.pyc'
+
+In [3]: 
+Do you really want to exit ([y]/n)? 
+azim_se@othrys2:~$ gdal_translate -of JPEG 
+Usage: gdal_translate [--help-general] [--long-usage]
+       [-ot {Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/
+             CInt16/CInt32/CFloat32/CFloat64}] [-strict]
+       [-of format] [-b band] [-mask band] [-expand {gray|rgb|rgba}]
+       [-outsize xsize[%] ysize[%]]
+       [-unscale] [-scale[_bn] [src_min src_max [dst_min dst_max]]]* [-exponent[_bn] exp_val]*
+       [-srcwin xoff yoff xsize ysize] [-projwin ulx uly lrx lry] [-epo] [-eco]
+       [-a_srs srs_def] [-a_ullr ulx uly lrx lry] [-a_nodata value]
+       [-gcp pixel line easting northing [elevation]]*
+       [-mo "META-TAG=VALUE"]* [-q] [-sds]
+       [-co "NAME=VALUE"]* [-stats] [-norat]
+       src_dataset dst_dataset
+
+FAILURE: No source dataset specified.
+azim_se@othrys2:~$ cd DATASETS/Worldview4/test/
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -of JPEG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF.aux.xml
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -of JPEG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF.aux.xml
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -of JPEG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -of JPEG -ot Byte 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -of JPEG -scale 0 65535 0 255 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+Input file size is 45386, 33753
+0Warning 6: JPEG driver doesn't support data type UInt16. Only eight bit byte bands supported.
+
+^C
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -of GTiff -scale 0 65535 0 255 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+Input file size is 45386, 33753
+0^C
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -of GTiff -scale 0 2047 0 255 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+Input file size is 45386, 33753
+0^C
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -of JPEG -scale 0 2047 0 255 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+Input file size is 45386, 33753
+0Warning 6: JPEG driver doesn't support data type UInt16. Only eight bit byte bands supported.
+
+^C
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -of GTiff -scale 0 2047 0 255 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte -of PNG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF.aux.xml
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte -of PNG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_B_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_G_WHOLE_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF.aux.xml
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte -of PNG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_A96_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit.TIF.zip
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_A96.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop_8bit.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_Center_crop.TIF.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_R_WHOLE_8bit.TIF.aux.xml
+azim_se@othrys2:~/DATASETS/Worldview4/test$ gdal_translate -ot Byte -of PNG 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.png
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@othrys2:~/DATASETS/Worldview4/test$ mogrify -format jpg 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.jpg
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.png
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.png.aux.xml
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF
+17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.TIF.aux.xml
+azim_se@othrys2:~/DATASETS/Worldview4/test$ mogrify -format jpg 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_8bit.png
+azim_se@othrys2:~/DATASETS/Worldview4/test$ 
+
+
+###########################################################
+#################TENSORFLOW#####################
+###########################################################
+bash: /home/azim_se/.bashrc: line 351: syntax error: unexpected end of file
+azim_se@bolia:~$ cd /home/azim_se/Pictures/Pablo
+azim_se@bolia:~/Pictures/Pablo$ gdal_translate -co TILED=YES 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit_pred_grayscale.png t.tif
+Input file size is 45386, 33753
+0...10..^C
+azim_se@bolia:~/Pictures/Pablo$ gdal_translate -co COMPRESS=LZW -co TILED=YES 17MAY29101200-S2AS-18EUSI-2177-Munich-WV4_RGB_16bit_pred_grayscale.png t.tif
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/Pictures/Pablo$ gdaladdo -r average t.tif 2 4 8 16 32 64
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/Pictures/Pablo$ qgis t.tif 
+Warning: loading of qgis translation failed [/usr/share/qgis/i18n//qgis_en_US]
+Warning: loading of qt translation failed [/usr/share/qt4/translations/qt_en_US]
+Warning: QGraphicsScene::addItem: item has already been added to this scene
+Warning: void DBusMenuExporterPrivate::addAction(QAction*, int): Already tracking action "Terms of Service / About" under id 212 
+Warning: void DBusMenuExporterPrivate::addAction(QAction*, int): Already tracking action "&Toolbox" under id 326 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+
+
+^Z
+[1]+  Stopped                 qgis t.tif
+azim_se@bolia:~/Pictures/Pablo$ bg
+[1]+ qgis t.tif &
+azim_se@bolia:~/Pictures/Pablo$ gdal_polygonize.py t.tif -f GeoJSON vectors.geojson
+Creating output vectors.geojson of format GeoJSON.
+0^C^C^C^C^Z
+[2]+  Stopped                 gdal_polygonize.py t.tif -f GeoJSON vectors.geojson
+azim_se@bolia:~/Pictures/Pablo$ kill %2
+
+[2]+  Stopped                 gdal_polygonize.py t.tif -f GeoJSON vectors.geojson
+azim_se@bolia:~/Pictures/Pablo$ 
+[2]+  Terminated              gdal_polygonize.py t.tif -f GeoJSON vectors.geojson
+azim_se@bolia:~/Pictures/Pablo$ gdal_translate -srcwin 10000 10000 2000 2000 t.tif t_cut.tif
+Input file size is 45386, 33753
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/Pictures/Pablo$ gdal_polygonize.py t_cut.tif -f GeoJSON vectors.geojson
+Creating output vectors.geojson of format GeoJSON.
+ERROR 6: The GeoJSON driver does not overwrite existing files.
+Traceback (most recent call last):
+  File "/usr/bin/gdal_polygonize.py", line 186, in <module>
+    dst_layer = dst_ds.CreateLayer(dst_layername, srs = srs )
+AttributeError: 'NoneType' object has no attribute 'CreateLayer'
+azim_se@bolia:~/Pictures/Pablo$ rm vectors.geojson 
+azim_se@bolia:~/Pictures/Pablo$ gdal_polygonize.py t_cut.tif -f GeoJSON vectors.geojson
+Creating output vectors.geojson of format GeoJSON.
+0...10...20...30...40...50...60...70...80...90...100 - done.
+azim_se@bolia:~/Pictures/Pablo$ less vectors.geojson 
+azim_se@bolia:~/Pictures/Pablo$ qgis t_cut.tif vectors.geojson 
+Warning: loading of qgis translation failed [/usr/share/qgis/i18n//qgis_en_US]
+Warning: loading of qt translation failed [/usr/share/qt4/translations/qt_en_US]
+Warning: QGraphicsScene::addItem: item has already been added to this scene
+Warning: void DBusMenuExporterPrivate::addAction(QAction*, int): Already tracking action "Terms of Service / About" under id 212 
+Warning: void DBusMenuExporterPrivate::addAction(QAction*, int): Already tracking action "&Toolbox" under id 326 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+Warning: void DBusMenuExporterPrivate::fillLayoutItem(DBusMenuLayoutItem*, QMenu*, int, int, const QStringList&): No id for action 
+[1]+  Done                    qgis t.tif
+azim_se@bolia:~/Pictures/Pablo$ 
+
+################################################################
