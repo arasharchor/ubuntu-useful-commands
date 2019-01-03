@@ -1,0 +1,1 @@
+rsync -av /home/azim_se/DATASETS/IMAGENET2012 .
