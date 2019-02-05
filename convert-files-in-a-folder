@@ -1,6 +1,8 @@
 #This will convert all the .jpg files into .png files and saves the converted files in the same directory.
 mogrify -format jpg *.png   
 
+gdal_translate -ot Byte -of PNG *.tif *.png
+
 
 for f in *.tif
 do
