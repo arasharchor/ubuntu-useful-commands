@@ -1,0 +1,13 @@
+azim_se@bolia:/media/azim_se$ lsblk 
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   3.7T  0 disk 
+├─sda1   8:1    0   976M  0 part /boot/efi
+├─sda2   8:2    0 143.1G  0 part /
+├─sda3   8:3    0   4.8G  0 part [SWAP]
+└─sda4   8:4    0   3.5T  0 part /space
+sdb      8:16   0   7.3T  0 disk 
+├─sdb1   8:17   0   200M  0 part 
+└─sdb2   8:18   0   7.3T  0 part 
+sr0     11:0    1  1024M  0 rom  
+azim_se@bolia:/media/azim_se$ 
+azim_se@bolia:/media/azim_se$ sudo mount -t ntfs /dev/sdb2 /media/azim_se/
