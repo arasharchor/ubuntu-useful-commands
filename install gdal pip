@@ -1,0 +1,1 @@
+CFLAGS="-I /usr/include/gdal" CXXFLAGS="-I /usr/include/gdal" pip install GDAL==1.11.2
