@@ -1,0 +1,10 @@
+To list all containers, both running and stopped, add –a :
+docker container ls
+docker ps –a
+
+stop containers
+rm containers
+
+list images
+
+remove images
