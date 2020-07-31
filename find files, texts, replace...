@@ -1,0 +1,39 @@
+rename files with a pattern
+find . -depth -name "*.html" -exec sh -c 'f="{}"; mv -- "$f" "${f%.html}.php"' \;
+find ~/annotation_nowai/ -depth -iname "*cvat*.*" -exec sh -c 'f="{}"; mv -- "$f" "${f%cv}nowai"' \;
+find ~/annotation_nowai/ -depth -iname "*cvat*.*" -exec sh -c 'f="{}"; mv -- "$f" "$(echo "$f" | sed s/IMG/VACATION/)"' \;
+
+
+
+find ./ -type f -exec sed -i 's/string1/string2/' {} \;
+
+find ~/cvat_annotation_ternowai_test/ -iname *cvat*.*;
+
+find /home/www \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i 's/subdomainA\.example\.com/subdomainB.example.com/g'
+
+
+
+find ~/annotation_nowai/ -iname *cv*.* -type f -exec vim {} \;
+
+
+grep -rnw '/path/to/somewhere/' -e 'pattern'
+
+    -r or -R is recursive,
+    -n is line number, and
+    -w stands for match the whole word.
+    -l (lower-case L) can be added to just give the file name of matching files.
+
+Along with these, --exclude, --include, --exclude-dir flags could be used for efficient searching:
+
+    This will only search through those files which have .c or .h extensions:
+
+    grep --include=\*.{c,h} -rnw '/path/to/somewhere/' -e "pattern"
+
+    This will exclude searching all the files ending with .o extension:
+
+    grep --exclude=\*.o -rnw '/path/to/somewhere/' -e "pattern"
+
+    For directories it's possible to exclude one or more directories using the --exclude-dir parameter. For example, this will exclude the dirs dir1/, dir2/ and all of them matching *.dst/:
+
+    grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/somewhere/' -e "pattern"
+
