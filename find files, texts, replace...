@@ -1,13 +1,13 @@
 rename files with a pattern
 find . -depth -name "*.html" -exec sh -c 'f="{}"; mv -- "$f" "${f%.html}.php"' \;
-find ~/annotation_nowai/ -depth -iname "*cvat*.*" -exec sh -c 'f="{}"; mv -- "$f" "${f%cv}nowai"' \;
-find ~/annotation_nowai/ -depth -iname "*cvat*.*" -exec sh -c 'f="{}"; mv -- "$f" "$(echo "$f" | sed s/IMG/VACATION/)"' \;
+find ~/annotation_nowai/ -depth -iname "*cv*.*" -exec sh -c 'f="{}"; mv -- "$f" "${f%cv}nowai"' \;
+find ~/annotation_nowai/ -depth -iname "*cv*.*" -exec sh -c 'f="{}"; mv -- "$f" "$(echo "$f" | sed s/IMG/VACATION/)"' \;
 
 
 
 find ./ -type f -exec sed -i 's/string1/string2/' {} \;
 
-find ~/cvat_annotation_ternowai_test/ -iname *cvat*.*;
+find ~/cv_annotation_rnowai_test/ -iname *cv*.*;
 
 find /home/www \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i 's/subdomainA\.example\.com/subdomainB.example.com/g'
 
