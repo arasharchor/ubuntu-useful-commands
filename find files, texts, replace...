@@ -1,7 +1,5 @@
 rename files with a pattern
-find . -depth -name "*.html" -exec sh -c 'f="{}"; mv -- "$f" "${f%.html}.php"' \;
 find ~/annotation_nowai/ -depth -iname "*cv*.*" -exec sh -c 'f="{}"; mv -- "$f" "${f%cv}nowai"' \;
-find ~/annotation_nowai/ -depth -iname "*cv*.*" -exec sh -c 'f="{}"; mv -- "$f" "$(echo "$f" | sed s/IMG/VACATION/)"' \;
 
 
 
@@ -16,8 +14,8 @@ find /home/www \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed
 find ~/annotation_nowai/ -iname *cv*.* -type f -exec vim {} \;
 
 
-grep -rnw '/path/to/somewhere/' -e 'pattern'
 
+grep -rnw '/root/deepzoomterowai/' -e 'microdrw'
     -r or -R is recursive,
     -n is line number, and
     -w stands for match the whole word.
@@ -36,4 +34,12 @@ Along with these, --exclude, --include, --exclude-dir flags could be used for ef
     For directories it's possible to exclude one or more directories using the --exclude-dir parameter. For example, this will exclude the dirs dir1/, dir2/ and all of them matching *.dst/:
 
     grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/somewhere/' -e "pattern"
+    
+
+######################### 
+find /root/deepzoomterowai/ -depth -name "*.html" -exec sh -c 'f="{}"; mv -- "$f" "${f%.html}.php"' \;
+find /root/deepzoomterowai/ -depth -iname "*microdrw*.*" -exec sh -c 'f="{}"; mv -- "$f" "$(echo "$f" | sed s/microdrw/terowai/)"'  \;
+grep -rnw '/root/deepzoomterowai/' -e 'microdrw'
+find ~/deepzoomterowai -type f -exec sed -i 's/deepzoo.git/deepzoom.git/g' {} +
+
 
