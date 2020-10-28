@@ -38,8 +38,10 @@ Along with these, --exclude, --include, --exclude-dir flags could be used for ef
 
 ######################### 
 find /root/deepzoomterowai/ -depth -name "*.html" -exec sh -c 'f="{}"; mv -- "$f" "${f%.html}.php"' \;
+find /root/deepzoomterowai/ -depth -iname "*microdrw*" -exec sh -c 'f="{}"; mv -- "$f" "$(echo "$f" | sed s/microdrw/terowai/)"'  \;
 find /root/deepzoomterowai/ -depth -iname "*microdrw*.*" -exec sh -c 'f="{}"; mv -- "$f" "$(echo "$f" | sed s/microdrw/terowai/)"'  \;
 grep -rnw '/root/deepzoomterowai/' -e 'microdrw'
 find ~/deepzoomterowai -type f -exec sed -i 's/deepzoo.git/deepzoom.git/g' {} +
+find ~/annotation_terowai_test \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i 's/Inl Corpor/Terow AI/g'
 
 
