@@ -1,6 +1,6 @@
 rename files with a pattern
 find ~/annotation_nowai/ -depth -iname "*cv*.*" -exec sh -c 'f="{}"; mv -- "$f" "${f%cv}nowai"' \;
-
+rename 's/Lane_tunnel_X8_matlab_bicubic_//;' *
 
 
 find ./ -type f -exec sed -i 's/string1/string2/' {} \;
